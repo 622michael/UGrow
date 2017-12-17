@@ -1,0 +1,25 @@
+### Backend ignores ###
+
+# Logs
+
+backend/logs
+backend/npm-debug.log*
+backend/yarn-debug.log*
+backend/yarn-error.log*
+
+# Runtime
+backend/pids
+*.pid
+*.seed
+*.pid.lock
+
+backend/build/Release
+
+backend/node_modules/
+backend/jspm_packages/
+
+.npm
+
+*.tgz
+
+.env
