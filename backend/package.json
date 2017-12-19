@@ -1,0 +1,23 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "The backend for the UGrow website",
+  "main": "index.js",
+  "scripts": {
+    "test-int": "./node_modules/.bin/mocha test/integration/*.js",
+    "test-unit": "./node_modules/.bin/mocha test/unit/*.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.2",
+    "pg": "^6.4.2",
+    "pg-hstore": "^2.3.2",
+    "request": "^2.83.0",
+    "sequelize": "^4.28.6"
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "mocha": "^4.0.1"
+  }
+}
