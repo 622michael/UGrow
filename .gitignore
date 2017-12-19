@@ -20,6 +20,8 @@ backend/jspm_packages/
 
 backend/package-lock.json
 
+backend/db/config/config.json
+
 .npm
 
 *.tgz
