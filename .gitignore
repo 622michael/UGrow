@@ -18,6 +18,8 @@ backend/build/Release
 backend/node_modules/
 backend/jspm_packages/
 
+backend/package-lock.json
+
 .npm
 
 *.tgz
