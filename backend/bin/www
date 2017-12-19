@@ -1,0 +1,14 @@
+#!/usr/bin/env node
+
+var app = require('../app');
+var models = require('../db/models')
+
+models.sequelize.authenticate().then(function(err) {
+	// Connected to database succesfully
+
+	app.listen(3000, () => console.log("Started server on port 3000..."))
+}).catch(function(err) {
+	// Failed to connect to database
+
+	console.log("Failure to connect to database:", err)
+});

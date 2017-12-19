@@ -4,7 +4,8 @@
   "description": "The backend for the UGrow website",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test-int": "./node_modules/.bin/mocha test/integration/*.js",
+    "test-unit": "./node_modules/.bin/mocha test/unit/*.js"
   },
   "author": "",
   "license": "ISC",
@@ -12,6 +13,7 @@
     "express": "^4.16.2",
     "pg": "^6.4.2",
     "pg-hstore": "^2.3.2",
+    "request": "^2.83.0",
     "sequelize": "^4.28.6"
   },
   "devDependencies": {
