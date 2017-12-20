@@ -1,5 +1,6 @@
 const models = require("./db/models")
 const Question = models.Question
+const Sequelize = require("sequelize")
 
 const answerType = {
 		multipleChoice: 0,
@@ -21,9 +22,14 @@ module.exports = {
 			.then(q => {
 				callback(q)
 			})
-			.catch(error => {
+			.catch(Sequelize.ValidationError, error => {
 				callback(false)
 			})
+			.catch(error => {
+				throw error
+			})
+
+
 		}
 	},
 	get: function(id) {
