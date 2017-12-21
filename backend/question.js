@@ -2,6 +2,8 @@ const models = require("./db/models")
 const Question = models.Question
 const Sequelize = require("sequelize")
 
+const blank = "*"
+
 const answerType = {
 		multipleChoice: 0,
 		shortAnswer: 1,
@@ -15,20 +17,27 @@ module.exports = {
 			callback(false)
 			return
 		} else {
-			Question.build({
-				content: content, 
-				answerType: type
-			}).save()
-			.then(q => {
-				callback(q)
-			})
-			.catch(Sequelize.ValidationError, error => {
+			var ok = true
+			if (type == answerType.fillInTheBlank) {
+				ok = content.search("\\" + blank) > 0
+			}
+			if (ok) {
+				Question.build({
+					content: content, 
+					answerType: type
+				}).save()
+				.then(q => {
+					callback(q)
+				})
+				.catch(Sequelize.ValidationError, error => {
+					callback(false)
+				})
+				.catch(error => {
+					throw error
+				})
+			} else {
 				callback(false)
-			})
-			.catch(error => {
-				throw error
-			})
-
+			}
 
 		}
 	},
@@ -38,5 +47,7 @@ module.exports = {
 	delete: function(id) {
 
 	},
-	answerType: answerType
+
+	answerType: answerType,
+	blank: blank
 }
