@@ -21,10 +21,10 @@ describe("Test routing and response to answer create", function() {
 					json: mockAnswer
 				}, function(error, response, body) {
 					if (error != null) {
+						// is the server running?
 						expect(1).equals(2)
 						done()
 					} else {					
-						console.log(body)
 						expect(body).to.have.property('id')
 						expect(body.content).equals("Rome was alright")
 						expect(body).to.have.property('QuestionId')
@@ -36,7 +36,23 @@ describe("Test routing and response to answer create", function() {
 		})
 
 	})
-	it("should return an error", function() {
+	it("should return an error", function(done) {
+		mockAnswer = {
+			content: "This is an answer to no question"
+		}
+		request({
+			uri: "http://localhost:3000/answer/create",
+			method: "POST",
+			json: mockAnswer
+		}, function(error, response, body) {
+			if (error != null) {
+				expect(1).equals(2)
+				done()
+			} else {
+				expect(body).to.have.property('error')
+				done()
+			}
+		})
 
 	})
 })

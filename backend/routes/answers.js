@@ -20,7 +20,7 @@ router.post('/create', function(req, res) {
 	 	res.json(json)
 	 })
 	 .catch(error => {
-	 	res.json(JSON.stringify({"error": error}))
+	 	res.json({"error": error})
 	 })
 })
 
