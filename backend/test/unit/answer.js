@@ -1,37 +1,39 @@
-const Answer = require("../../answer")
 const models = require("../../db/models")
-const Question = models.Question
+
+const Answer = require("../../answer")
+const Question = require("../../question")
+const AnswerType = Question.answerType
+
 const expect = require('chai').expect
-const AnswerType = require("../../question").answerType
 const sinon = require("sinon")
 
 describe("test data validation of answers", function() {
-	// For these tests to pass there must be at least one
-	// question in the database and the database must be on
+	// Ruins database; creates an answer that has no question
+	// Fix by actually creating the question
+	
+	// it("should create a new answer to the question", async() => {
+	// 	var mockQuestion = {
+	// 		id: 0,
+	// 		content: "How was Canada?",
+	// 		answerType: AnswerType.shortAnswer
+	// 	}
+	// 	var mockPost = {
+	// 		content: "I liked it!",
+	// 		QuestionId: 0,
+	// 		private: false
+	// 	}
 
-	it("should create a new answer to the question", async() => {
-		var mockQuestion = {
-			id: 0,
-			content: "How was Canada?",
-			answerType: AnswerType.shortAnswer
-		}
-		var mockPost = {
-			content: "I liked it!",
-			QuestionId: 0,
-			private: false
-		}
+	// 	var questionGet = sinon.stub(models.Question, 'findById')
+	// 	questionGet.resolves(mockQuestion)
 
-		var questionGet = sinon.stub(Question, 'findById')
-		questionGet.resolves(mockQuestion)
+	// 	const a = await Answer.create(mockPost)
 
-		const a = await Answer.create(mockPost)
+	// 	questionGet.restore()
 
-		questionGet.restore()
-
-		expect(a.content).equals("I liked it!")
-		expect(a.QuestionId).equals(0)
-		expect(a.private).equals(false)
-	})
+	// 	expect(a.content).equals("I liked it!")
+	// 	expect(a.QuestionId).equals(0)
+	// 	expect(a.private).equals(false)
+	// })
 	it("should reject the answers that content is not valid", function(done) {
 		var mockQuestion = {
 			id: 0,
@@ -44,7 +46,7 @@ describe("test data validation of answers", function() {
 			private: false
 		}
 
-		var questionGet = sinon.stub(Question, 'findById')
+		var questionGet = sinon.stub(models.Question, 'findById')
 		questionGet.resolves(mockQuestion)
 
 		Answer.create(mockPost) 
@@ -129,4 +131,67 @@ describe("test validation of different answer types", function(done) {
 		done() 
 	})
 
+})
+
+describe("test feeding functionality", function(done) {
+
+	it("should throw an error on a 0 limit", function() {
+		return Answer.public(0, 0)
+		.then(answers => {
+			expect("An error should have been thrown").equals("")
+		})
+		.catch(e => {
+			expect(e).equals("Limit must be greater than 0.")
+		})
+
+	})
+	it("should thow an error on a negative offset", function() {
+		return Answer.public(1, -1)
+		.then(answers => {
+			expect("An error should have been thrown").equals("")
+		})
+		.catch(e => {
+			expect(e).equals("Offset must be positive.")
+		})
+	})
+	it("should not return any private objects", function() {
+		return Answer.public(10, 0)
+		.then( answers => {
+			answers.forEach(answer => {
+				expect(answer.private).equals(false)
+			})
+		})
+	})
+	it("should return only the limit", function() {
+		return Answer.public(1, 0)
+		.then( answers => {
+			expect(answers.length).equal(1)
+		})
+
+	})
+
+	it("should return the question object's content," +
+		"id and answer ids", 
+		function() {
+			return Answer.public(1, 0)
+			.then(answers => {
+				answers.forEach( answer => {
+					expect(answer).to.have.property("Question")
+					expect(answer.Question).to.have.property("id")
+					expect(answer.Question).to.have.property("content")
+					expect(answer).to.have.property("id")
+					expect(answer).to.have.property("content")
+				})
+			})
+	})
+
+	it("should throw an error on large requests", function() {
+		return Answer.public(1000, 0)
+		.then( answers => {
+			expect(answers).equal(null)
+		})
+		.catch( error => {
+			expect(error).equals("Limit must be less than 50.")
+		})
+	})
 })

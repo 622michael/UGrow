@@ -2,6 +2,7 @@ var expect = require("Chai").expect
 var request = require("request")
 var Question = require("../../question")
 var AnswerType = Question.answerType
+var rp = require("request-promise")
 
 describe("Test routing and response to answer create", function() {
 	it("should return a new answer in json form", function(done) {
@@ -54,5 +55,37 @@ describe("Test routing and response to answer create", function() {
 			}
 		})
 
+	})
+})
+
+function pageFeed(uri) {
+	return rp({
+		uri: uri,
+		json:true
+	})
+	.then(json => {
+		expect(json).to.have.property('answers')
+		expect(json).to.have.property('next')
+
+		if (json.answers.length == 0) {
+			// Done paging
+			return
+		} else {
+			json.answers.forEach(answer => {
+				expect(answer).to.have.property('question')
+				expect(answer.question).to.have.property('id')
+				expect(answer.question).to.have.property('content')
+				expect(answer).to.have.property('id')
+				expect(answer).to.have.property('content')
+			})
+
+			return pageFeed("http://localhost:3000/answer" + json.next)
+		}
+	})
+}
+
+describe("test getting and paging feed", function() {
+	it("should get the feed and page through it", function() {
+		return pageFeed("http://localhost:3000/answer/public")
 	})
 })

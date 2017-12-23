@@ -79,6 +79,38 @@ module.exports = {
 			})
 		})
 	},
+	public: function(limit, offset) {
+		return new Promise((resolve, reject) => {
+			if (limit <= 0) {
+				reject("Limit must be greater than 0.")
+				return;
+			}
+			if (offset < 0) {
+				reject("Offset must be positive.");
+				return;
+			}
+
+			if (limit > 50) {
+				reject("Limit must be less than 50.");
+				return;
+			}
+
+			models.Answer.findAll({
+				where: {
+					private: false
+				},
+				limit: limit,
+				offset: offset,
+				include: [{model: models.Question}]
+			})
+			.then(answers => {
+				resolve(answers)
+			})
+			.catch(e => {
+				reject(e)
+			})
+		})
+	},
 
 	contentValidation: validateContent
 }
