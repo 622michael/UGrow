@@ -17,7 +17,8 @@ describe("test data validation of answers", function() {
 		}
 		var mockPost = {
 			content: "I liked it!",
-			QuestionId: 0
+			QuestionId: 0,
+			private: false
 		}
 
 		var questionGet = sinon.stub(Question, 'findById')
@@ -29,16 +30,18 @@ describe("test data validation of answers", function() {
 
 		expect(a.content).equals("I liked it!")
 		expect(a.QuestionId).equals(0)
+		expect(a.private).equals(false)
 	})
-	it("should reject the answer to the question", async() => {
+	it("should reject the answers that content is not valid", function(done) {
 		var mockQuestion = {
 			id: 0,
 			content: "Canda was * *",
-			answerType: AnswerType.fillInTheBlank
+			answerType: AnswerType.fillInTheBlank,
 		}
 		var mockPost = {
 			content: "good",
-			QuestionId: 0
+			QuestionId: 0,
+			private: false
 		}
 
 		var questionGet = sinon.stub(Question, 'findById')
@@ -47,12 +50,46 @@ describe("test data validation of answers", function() {
 		Answer.create(mockPost) 
 		.then(a => {
 			assert("The answer was not rejected")
+			done()
 		})
 		.catch(e => {
 			expect(e).equals("Content does not match question type")
+			done()
 		})
 
 		questionGet.restore()
+	})
+	it("should reject the answer to no question", function(done) {
+		var mockPost = {
+			content: "yeah I liked it",
+			private: false
+		}
+
+		Answer.create(mockPost)
+		.then(a => {
+			assert("The answer was not rejected")
+			done()
+		})
+		.catch(e => {
+			expect(e).equals("Question ID cannot be null or less than 0")
+			done()
+		})
+	})
+	it("should reject an answer not specified as public or private", function(done) {
+		var mockPost = {
+			content: "It was a jolly christmas",
+			QuestionId: 0
+		}
+
+		Answer.create(mockPost)
+		.then(a => {
+			assert("The answer was not rejected")
+			done()
+		})
+		.catch(e => {
+			expect(e).equals("Must specific if the question is public or private.")
+			done()
+		})
 	})
 })
 

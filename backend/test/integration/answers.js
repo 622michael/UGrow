@@ -12,9 +12,9 @@ describe("Test routing and response to answer create", function() {
 			} else {
 				mockAnswer = {
 					content: "Rome was alright",
-					QuestionId: q.id
+					QuestionId: q.id,
+					private: false
 				}
-				console.log("JSON to send: ", JSON.stringify(mockAnswer))
 				request({
 					uri: "http://localhost:3000/answer/create",
 					method: "POST",

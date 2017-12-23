@@ -15,7 +15,7 @@ module.exports = {
       updatedAt: new Date(),
     },
     {
-      content: "My day was _____ ______",
+      content: "My day was * *",
       answerType: 2,
       createdAt: new Date(),
       updatedAt: new Date(),
@@ -23,6 +23,6 @@ module.exports = {
   },
 
   down: (queryInterface, Sequelize) => {
-    return queryInterface.bulkInsert('Questions', null, {})
+    return queryInterface.bulkDelete('Questions', null, {})
   }
 };

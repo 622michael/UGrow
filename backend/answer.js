@@ -51,25 +51,32 @@ module.exports = {
 		return new Promise((resolve, reject) => {
 			if (raw.QuestionId == null || raw.QuestionId < 0) {
 				reject("Question ID cannot be null or less than 0")
-			} else {
-				models.Question.findById(raw.QuestionId)
-				.then(q => {
-					if (validateContent[q.answerType](raw.content, q.content)) {
-						return models.Answer.build({
-							content: raw.content,
-							QuestionId: q.id
-						}).save()
-					} else {
-						reject("Content does not match question type")
-					}
-				})
-				.then(a => {
-					resolve(a)
-				})
-				.catch(error => {
-					reject(error)
-				})
+				return
+			} 
+			if (raw.private == null) {
+				reject("Must specific if the question is public or private.")
+				return
 			}
+
+
+			models.Question.findById(raw.QuestionId)
+			.then(q => {
+				if (validateContent[q.answerType](raw.content, q.content)) {
+					return models.Answer.build({
+						content: raw.content,
+						QuestionId: q.id,
+						private: raw.private
+					}).save()
+				} else {
+					reject("Content does not match question type")
+				}
+			})
+			.then(a => {
+				resolve(a)
+			})
+			.catch(error => {
+				reject(error)
+			})
 		})
 	},
 

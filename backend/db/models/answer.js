@@ -1,7 +1,8 @@
 'use strict';
 module.exports = (sequelize, DataTypes) => {
   var Answer = sequelize.define('Answer', {
-    content: DataTypes.STRING
+    content: DataTypes.STRING,
+    private: DataTypes.BOOLEAN
   })
 
   Answer.associate = function(models) {
