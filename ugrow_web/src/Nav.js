@@ -1,5 +1,6 @@
 import React from 'react';
 import { Collapse, Dropdown, DropdownItem, DropdownToggle, DropdownMenu, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink } from 'reactstrap';
+import GoogleAuth from './OAuth'
 
 export default class TopNav extends React.Component {
   constructor(props) {
@@ -27,7 +28,8 @@ export default class TopNav extends React.Component {
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
               <NavItem>
-                <NavLink href="/">Sign in</NavLink>
+                <GoogleAuth />
+                {/* <NavLink href="/">Sign in</NavLink> */}
               </NavItem>
               <Dropdown nav isOpen={this.state.dropdownOpen} toggle={this.toggle}>
                 <DropdownToggle nav caret>Dropdown</DropdownToggle>
