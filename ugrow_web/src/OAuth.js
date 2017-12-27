@@ -1,6 +1,9 @@
 import React from 'react';
 import {GoogleLogin, GoogleLogout} from 'react-google-login';
- 
+
+const url = "http://Immakingthisup.com";
+const WEB_CLIENT_ID = '520933852537-7kp1tqiq1jl8qddoj9vsoh8rvu2a1tha.apps.googleusercontent.com';
+
 export default class GoogleAuth extends React.Component {
 
     constructor(props) {
@@ -10,28 +13,33 @@ export default class GoogleAuth extends React.Component {
         }
     }
 
-    //const WEB_CLIENT_ID = '520933852537-7kp1tqiq1jl8qddoj9vsoh8rvu2a1tha.apps.googleusercontent.com';
+    toggle = () => {
+        this.setState({
+            isLoggedIn: !this.state.isLoggedIn,
+        })
+    }
 
     /* Collects the response */
 
     handleLoginSuccess = (response) => {
         // Grabs the token portion we want:
         let theGoods = response.tokenObj.id_token;
+
+        fetch(url, {
+            method: 'POST',
+            mode: 'cors',
+            redirect: 'follow',
+            headers: new Headers({
+                
+            })
+        }).then(() => this.toggle());  
+        //this.toggle();
+
         console.log(theGoods);
-
-        // Sets state to logged in
-        this.setState({
-            isLoggedIn: true
-        })
     }
 
-    handleLogoutSuccess = () => {
-        // NOTE: there is no response
-        // Sets state to logged out
-        this.setState({
-            isLoggedIn: false
-        })
-    }
+    handleLogoutSuccess = () => this.toggle()
+        
 
     render() {
         if (!this.state.isLoggedIn){
@@ -40,7 +48,7 @@ export default class GoogleAuth extends React.Component {
                     // The whole thing is just a button, with the functionality included
                     // NOTE: the button is kind of ugly but can deal with that part later 
                     <GoogleLogin 
-                        clientId="520933852537-7kp1tqiq1jl8qddoj9vsoh8rvu2a1tha.apps.googleusercontent.com"
+                        clientId={WEB_CLIENT_ID}
                         buttonText="Login!"
                         onSuccess={this.handleLoginSuccess}
                         onFailure={this.responseGoogle} />   
