@@ -29,17 +29,16 @@ export default class TopNav extends React.Component {
             <Nav className="ml-auto" navbar>
               <NavItem>
                 <GoogleAuth />
-                {/* <NavLink href="/">Sign in</NavLink> */}
               </NavItem>
               <Dropdown nav isOpen={this.state.dropdownOpen} toggle={this.toggle}>
                 <DropdownToggle nav caret>Dropdown</DropdownToggle>
-{/*                 <DropdownMenu>
+                 <DropdownMenu>
                     <DropdownItem header>Header</DropdownItem>
                     <DropdownItem disabled>Action</DropdownItem>
                     <DropdownItem>Another Action</DropdownItem>
                     <DropdownItem divider />
                     <DropdownItem>Another Action</DropdownItem>
-                </DropdownMenu> */}
+                </DropdownMenu>
               </Dropdown>
             </Nav>
           </Collapse>
