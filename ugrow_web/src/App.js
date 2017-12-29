@@ -15,9 +15,7 @@ class App extends Component {
     return (
       <div className="App">
         <TopNav />
-        <Header />
         <main>
-          {/* {this.props.children} */}
            <Switch>
             <Route exact path='/' component={Home}/>
             <Route path='/about' component={About}/>
@@ -32,21 +30,6 @@ class App extends Component {
     );
   }
 }
-
-const Header = () => (
-  <header>
-    <nav>
-      <ul>
-        <li><Link to='/'>Home</Link></li>
-        <li><Link to='/contact'>Contact Us</Link></li>
-        <li><Link to='/resources'>Resources</Link></li>
-        <li><Link to='/about'>About UGrow</Link></li>
-        <li><Link to='/hiw'>How UGrow Works</Link></li>
-        <li><Link to='/privacy'>Privacy Policy</Link></li>
-      </ul>
-    </nav>
-  </header>
-)
 
 export default App;
 
