@@ -1,7 +1,7 @@
 import React from 'react';
 import {GoogleLogin, GoogleLogout} from 'react-google-login';
+import API from './API';
 
-const url = "http://Immakingthisup.com";
 const WEB_CLIENT_ID = '520933852537-7kp1tqiq1jl8qddoj9vsoh8rvu2a1tha.apps.googleusercontent.com';
 
 export default class GoogleAuth extends React.Component {
@@ -23,19 +23,15 @@ export default class GoogleAuth extends React.Component {
 
     handleLoginSuccess = (response) => {
         // Grabs the token portion we want:
-        let theGoods = response.tokenObj.id_token;
+        let userToken = response.tokenObj/* .id_token */;
+        console.log(userToken);
+        
+        // Make HTTP request
+        let postReponse = API.userSignIn(userToken);
+        console.log(postReponse);
 
-        fetch(url, {
-            method: 'POST',
-            mode: 'cors',
-            redirect: 'follow',
-            headers: new Headers({
-                
-            })
-        }).then(() => this.toggle());  
-        //this.toggle();
-
-        console.log(theGoods);
+        // Switches state to show sign out button
+        this.toggle();
     }
 
     handleLogoutSuccess = () => this.toggle()
