@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-//import { Dropdown, DropdownToggle, DropdownMenu, DropdownItem, NavItem, NavLink } from 'reactstrap';
 import { NavItem, NavLink, UncontrolledDropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
 import { ButtonGroup, DropdownButton, Button, MenuItem } from "react-bootstrap";
 
@@ -31,14 +30,14 @@ export default class Roots extends Component {
         <Header /> 
         This is the roots page.
         <ButtonGroup>
-            <DropdownButton title="Dropdown" id="bg-nested-dropdown">
+            <DropdownButton title="Sex" id="bg-nested-dropdown">
             <MenuItem eventKey="1">Dropdown link</MenuItem>
             <MenuItem eventKey="2">Dropdown link</MenuItem>
             </DropdownButton>
         </ButtonGroup>
         <UncontrolledDropdown>
         <DropdownToggle caret>
-            Dropdown
+            Religion
         </DropdownToggle>
         <DropdownMenu>
             <DropdownItem header>Header</DropdownItem>

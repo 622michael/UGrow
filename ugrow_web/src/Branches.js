@@ -38,7 +38,9 @@ export default class Branches extends Component {
         <form onSubmit={this.handleSubmit}>
             <label>
                 How does gender influence your goals?
-                <textarea name="textarea"> </textarea>
+                <textarea name="textarea"> Type Here </textarea>
+                and/or attach a file (e.g. a picture, video, etc...)
+                <input type="file" name="file" />
             </label>
             {/* <input type="submit" value="Submit" /> */}
         </form> 
