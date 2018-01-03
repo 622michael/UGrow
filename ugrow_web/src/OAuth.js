@@ -23,7 +23,7 @@ export default class GoogleAuth extends React.Component {
 
     handleLoginSuccess = (response) => {
         // Grabs the token portion we want:
-        let userToken = response.tokenObj/* .id_token */;
+        let userToken = response.tokenObj;
         console.log(userToken);
         
         // Make HTTP request
