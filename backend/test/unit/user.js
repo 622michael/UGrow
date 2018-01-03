@@ -4,7 +4,8 @@ const expect = require('chai').expect
 describe("Tests to test creation of users", function() {
 	it("create a new user with email'rachel@gmail.com', name 'Rachel', userId '123', expireTime '456', id_Token '789'", function(done) {
 		var id = 1
-		User.remove(id, function(user){
+		User.remove(id)
+		.then( u => {
 			User.create(1, 'rachel@gmail.com',"Rachel", 123, 456, '789', function(user) {
 				expect(user).to.not.equal(false)
 				expect(user.id).equals(1)
@@ -15,40 +16,58 @@ describe("Tests to test creation of users", function() {
 				expect(user.id_token).equals('789')	
 				done()
 			})
+		})
+		.catch( error => {
+			assert(false)
+			done() 
 		}) 
 	})
 	it("should find user with id and return the user", function(done) {
 		var id = 1
-		User.remove(id, function(user){
+		User.remove(id)
+		.then( u => {
 			User.create(1, 'rachel@gmail.com', "Rachel", 123, 456, "789", function(user) {
-				User.find(user.id, function(user){
-					expect(user).equals(true)
-					done()
+				expect(user).to.not.equal(false)
+				User.find(user.id)
+				.then ( user => {
+					expect(user.name).equals("Rachel")
+					done()	
 				})
 			})
 		})
 	})
 	it("should search for user with id and not find, returning false", function(done) {
 		var id = 1
-		User.remove(id, function(user){
-			User.find(user.id, function(user){
-				expect(user).equals(false)
-				done()
-			})
+		User.remove(id)
+		.then( u => {
+			console.log("Removed")
+			
+			return User.find(id)
+
+		})
+		.then( user => {
+			expect(user).equals(false)
+			done()
+		})
+		.catch( e => {
+			expect(e).equals(false)
+			done()
 		})
 	})
 	it("should remove user", function(done) {
 		User.create(1, 'rachel@gmail.com', "Rachel", 123, 456, "789", function(user) {
-			User.remove(1, function(user){
-				expect(user).equals(false)
+			User.remove(1)
+			.then( success => {
+				expect(success).equals(1)
 				done()
 			})
 		})
 	})
 	it("should not remove a user that doesn't exist ", function(done) {
-		User.remove(1, function(user){
-			expect(user).equals(false)
-			done()
+		User.remove(10)
+		.then(success => {
+				expect(success).equals(0)
+				done()
 		})
 	})
 	it("should not create a user whose id is null", function(done) {
@@ -95,7 +114,6 @@ describe("Tests to test creation of users", function() {
 	})
 	it("should not create a user whose id is not unique", function(done) {
 		User.create(1, "rachel@gmail.com", "Rachel", 123, 456, '789', function(user) {
-			expect(user).equals(true)
 			User.create(1, "michael@gmail.com", "Rachel", 124, 456, '788', function(user) {
 				expect(user).equals(false)
 				done()

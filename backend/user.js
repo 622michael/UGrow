@@ -35,7 +35,11 @@ module.exports = {
 			}
 			User.findById(id)
 			.then(user => {
-				resolve(user)
+				if (user == null) {
+					resolve(false)
+				} else {
+					resolve(user)
+				}
 			})
 			.catch(e => {
 				reject(e)
@@ -43,18 +47,9 @@ module.exports = {
 		})
 	},
 	remove: function(id){
-		return new Promise((resolve, reject) => {
-			if(User.findById(id) == null){
-				reject("user does not exist")
-			}else{
-				User.findById(id)
-				.then(user => {
-					user.destroy()
-					resolve(user)
-				})
-				.catch(e => {
-					reject(e)
-				})
+		return User.destroy({
+			where: {
+				id: id
 			}
 		})
 	}
