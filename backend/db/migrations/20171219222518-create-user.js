@@ -6,22 +6,18 @@ module.exports = {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
-        isUnique: true,
+        unique: true,
         type: Sequelize.INTEGER
       },
       name: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING,
       }, 
       email: {
-        type: Sequelize.STRING,
-        isUnique :true,
-        validate: {
-          isEmail: true 
-        }
+        type: Sequelize.STRING
       },
       userId: {
         allowNull: false,
-        isUnique: true,
+        unique: true,
         type: Sequelize.INTEGER
       }, 
       expireTime: {
@@ -30,7 +26,7 @@ module.exports = {
       },
       id_token: {
         allowNull: false,
-        isUnique: true,
+        unique: true,
         type: Sequelize.STRING
       },
       createdAt: {

@@ -1,19 +1,21 @@
 const models = require("./db/models")
-const User = models.User
 const Sequelize = require("sequelize")
+const User = models.User
+
 
 module.exports = {
-	create: function(email, name, userId, expireTime, id_Token, callback) {
-		if (email == null || name == null || userId == null || expireTime == null || id_Token == null || expireTime < 0) {
+	create: function(id, email, name, userId, expireTime, id_token, callback) {
+		if (id == null|| email == null || name == null || userId == null || expireTime == null || id_token == null || expireTime < 0) {
 			callback(false)
 			return
 		} else {
 			User.build({
+				id: id,
 				email: email, 
                 name: name,
                 userId: userId,
                 expireTime: expireTime,
-                id_Token: id_Token
+                id_token: id_token
 			}).save()
 			.then(user => {
 				callback(user)
@@ -26,11 +28,34 @@ module.exports = {
 			})
 		}
 	},
-	find: function(userId){
-		//find a user based on their user id 
+	find: function(id){
+		return new Promise((resolve, reject) => {
+			if (id < 0) {
+				reject("id must be positive.");
+			}
+			User.findById(id)
+			.then(user => {
+				resolve(user)
+			})
+			.catch(e => {
+				reject(e)
+			})
+		})
 	},
-	findOrCreate: function(userId){
-		// if user is found - return it
-		// if user is not found - create a new user with that id
+	remove: function(id){
+		return new Promise((resolve, reject) => {
+			if(User.findById(id) == null){
+				reject("user does not exist")
+			}else{
+				User.findById(id)
+				.then(user => {
+					user.destroy()
+					resolve(user)
+				})
+				.catch(e => {
+					reject(e)
+				})
+			}
+		})
 	}
 }
