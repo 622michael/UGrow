@@ -2,11 +2,14 @@ import React, { Component } from "react";
 import { NavItem, NavLink, UncontrolledDropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
 import { ButtonGroup, DropdownButton, Button, MenuItem } from "react-bootstrap";
 
+import API from './API';
+
 export default class Roots extends Component {
   constructor(props){
       super(props);
       this.state = {
         value: '',
+        rootQs: [],
       };
 
       this.handleChange = this.handleChange.bind(this);
@@ -23,30 +26,34 @@ export default class Roots extends Component {
       event.preventDefault();
   }
 
+  setQuestions = (questions) => {
+      let qDropdowns = questions.map((q) => {
+          return(
+            <UncontrolledDropdown key={q.qID}>
+                <DropdownToggle caret>{q.qLabel}</DropdownToggle>
+                <DropdownMenu>
+                    <DropdownItem>Q1</DropdownItem>
+                    <DropdownItem>Q2</DropdownItem>
+                    <DropdownItem>Q3</DropdownItem>
+                    <DropdownItem>Q4</DropdownItem>
+                </DropdownMenu>
+            </UncontrolledDropdown>
+          )
+      })
+      this.setState({rootQs:qDropdowns});
+      console.log("state", this.state.rootQs);
+  }
+
+  componentWillMount() {
+      API.questionData.then(questions => this.setQuestions(questions));
+  }
   
   render() {
     return (
       <div id="roots">
         <Header /> 
         This is the roots page.
-        <ButtonGroup>
-            <DropdownButton title="Sex" id="bg-nested-dropdown">
-            <MenuItem eventKey="1">Dropdown link</MenuItem>
-            <MenuItem eventKey="2">Dropdown link</MenuItem>
-            </DropdownButton>
-        </ButtonGroup>
-        <UncontrolledDropdown>
-        <DropdownToggle caret>
-            Religion
-        </DropdownToggle>
-        <DropdownMenu>
-            <DropdownItem header>Header</DropdownItem>
-            <DropdownItem disabled>Action</DropdownItem>
-            <DropdownItem>Another Action</DropdownItem>
-            <DropdownItem divider />
-            <DropdownItem>Another Action</DropdownItem>
-        </DropdownMenu>
-        </UncontrolledDropdown>
+        {this.state.rootQs}
         <form onSubmit={this.handleSubmit}>
             <label>
                 My sex assigned at brith was...

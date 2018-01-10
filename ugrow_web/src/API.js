@@ -1,19 +1,20 @@
 import React from 'react';
 
-// https://stackoverflow.com/questions/46164068/react-js-fetch-returns-empty-response-but-postman-does-not
-
-export const MYJSON_TEST_URL = 'http://myjson.com/oj2vf';
-
-export const REAL_POST_URL = '/OAuth/login'
+export const MYJSON_TEST_URL = 'https://api.myjson.com/bins/10oh0j';
+export const USER_POST_URL = '/OAuth/login'
 
 
 export default class API extends React.Component {
 
     static initialize() {/* Add DEVMODE options*/}
 
+    ////////////////////////////////////
+    ////// OAUTH-RELATED REQUESTS //////
+    ////////////////////////////////////
+
     // Sends token to backend
     static userSignIn(userToken) {
-        return fetch(REAL_POST_URL, {
+        return fetch(USER_POST_URL, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -21,5 +22,22 @@ export default class API extends React.Component {
             body: JSON.stringify(userToken),
         }) 
         .catch(caught => console.log("Caught error: " + caught))
+    }
+
+    ///////////////////////////////////
+    //// QUESTION-RELATED REQUESTS ////
+    ///////////////////////////////////
+
+    // https://stackoverflow.com/questions/39512356/how-to-map-a-json-array-to-a-list-in-reactjs
+
+    static get questionData() {
+        return fetch(MYJSON_TEST_URL)
+        .then(response => response.json()) 
+        .then(json => {
+            let qData = json.questions;
+            console.log(qData);
+            return qData;
+        }) 
+        .catch(caught => console.log("Caught error getting question data: " + caught))
     }
 }
