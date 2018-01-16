@@ -1,8 +1,10 @@
 import React from 'react';
-//import { Collapse, Dropdown, DropdownItem, DropdownToggle, DropdownMenu, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink } from 'reactstrap';
 import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink } from 'reactstrap';
 import GoogleAuth from './OAuth'
 import FaTree from 'react-icons/lib/fa/tree'
+
+// Style components
+import './css/Nav.css';
 
 export default class TopNav extends React.Component {
   constructor(props) {
