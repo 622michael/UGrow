@@ -1,8 +1,9 @@
-import React from 'react';
-import {GoogleLogin, GoogleLogout} from 'react-google-login';
+import React from 'react'
+import {GoogleLogin, GoogleLogout} from 'react-google-login'
+import './OAuth.css'
 
-const url = "http://Immakingthisup.com";
-const WEB_CLIENT_ID = '520933852537-7kp1tqiq1jl8qddoj9vsoh8rvu2a1tha.apps.googleusercontent.com';
+const url = "http://Immakingthisup.com"
+const WEB_CLIENT_ID = '520933852537-7kp1tqiq1jl8qddoj9vsoh8rvu2a1tha.apps.googleusercontent.com'
 
 export default class GoogleAuth extends React.Component {
 
@@ -33,7 +34,6 @@ export default class GoogleAuth extends React.Component {
                 
             })
         }).then(() => this.toggle());  
-        //this.toggle();
 
         console.log(theGoods);
     }
@@ -46,7 +46,7 @@ export default class GoogleAuth extends React.Component {
             // Render as Login button
             return (
                     // The whole thing is just a button, with the functionality included
-                    // NOTE: the button is kind of ugly but can deal with that part later 
+                    // NOTE: the button is kind of ugly but can deal with that part later    
                     <GoogleLogin 
                         clientId={WEB_CLIENT_ID}
                         buttonText="Login!"

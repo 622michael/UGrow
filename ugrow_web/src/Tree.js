@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { NavItem, NavLink, UncontrolledDropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
+import { NavLink } from 'reactstrap';
 
 export default class Tree extends Component {
   render() {
