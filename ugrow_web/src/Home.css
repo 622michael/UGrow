@@ -1,10 +1,20 @@
-body {
+ .home {
+  /*To support older browsers*/
+  height: 100%;
+  width: 100%;
+  
+  /* Set the height to match that of the viewport. */
+  height: 93vh;
+
+  /* Set the width to match that of the viewport. */
+  width: 98vw;    
+     
   background-image: url("Home_Page/Logo.png");
   background-repeat: no-repeat;
-  background-position: center;
-  background-position-y: 75px;
   background-size: 43%;
-}
+  background-position: center;
+  background-position-y: 75px;  
+} 
 
 #motto {
   position: absolute;

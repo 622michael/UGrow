@@ -1,14 +1,25 @@
-#feed {
-    background-image: url("Feed_Page/Feed_Background.png");
-    background-position: center;
+.feed {
+    /*To support older browsers*/
+    height: 100%;
+    width: 100%;
+  
+    /* Set the height to match that of the viewport. */
+    height: 100vh;
+  
+    /* Set the width to match that of the viewport. */
+    width: 99vw;
+
+    background-image: url("./Feed_Page/Feed_Background.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     background-size: 100%;
 }
 
-#headingBox {
+/* #headingBox {
     position: absolute;
     top: 500px;
     left: 0px;
-}
+} */
 
 #feedB {
     position: absolute;

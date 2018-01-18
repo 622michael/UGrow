@@ -6,7 +6,9 @@ import 'bootstrap/dist/css/bootstrap.css';
 import './index.css';
 
 render((
+    <div className="webPage">
     <BrowserRouter>
       <App />
     </BrowserRouter>
+    </div>
   ), document.getElementById('root'));

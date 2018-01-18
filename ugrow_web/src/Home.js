@@ -11,7 +11,7 @@ import leaf6 from './Home_Page/Leaf.6.png'
 export default class Home extends Component {
   render() {
     return (
-      <div id="home">
+      <div className="home">
           <img src={motto} alt="" id="motto"/>
           <img src={leaf1} alt="" id="leaf1"/>
           <img src={leaf2} alt="" id="leaf2"/>

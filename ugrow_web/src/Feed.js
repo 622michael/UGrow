@@ -16,10 +16,10 @@ export default class Feed extends Component {
 
   render() {
     return (
-      <div id="feed">
+      <div className="feed">
         <img src ={feedB} alt="" id ="feedB"/>
         <img src ={feedF} alt="" id ="feedF"/>
-        <img src={headingBox} alt="" id="headingBox"/>
+        {/* <img src={headingBox} alt="" id="headingBox"/> */}
         <p>this is a test</p>
         <p>this is a test</p>
         <p>this is a test</p>
@@ -43,6 +43,8 @@ export default class Feed extends Component {
         <p>this is a test</p>
         <p>this is a test</p>
         <p>this is a test</p>
+        <p>this is a test</p>
+        
           
       </div>
     );
