@@ -28,8 +28,6 @@ export default class API extends React.Component {
     //// QUESTION-RELATED REQUESTS ////
     ///////////////////////////////////
 
-    // https://stackoverflow.com/questions/39512356/how-to-map-a-json-array-to-a-list-in-reactjs
-
     static get questionData() {
         return fetch(MYJSON_TEST_URL)
         .then(response => response.json()) 
