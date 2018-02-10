@@ -1,0 +1,51 @@
+#resourcesIcon {
+    position: absolute;
+    left:500px;
+    top: 80px;
+}
+
+#lehighUIcon {
+    position: absolute;
+    top: 150px;
+    left: 225px;
+    background-color: transparent;
+    cursor:pointer;
+    border: none;
+    outline: none;
+    /* overflow: hidden;
+    background-repeat:no-repeat; */
+}
+
+#lehighVIcon {
+    position: absolute;
+    top: 150px;
+    left: 550px;
+    background-color: transparent;
+    cursor:pointer;
+    border: none;
+    outline: none;
+    /* overflow: hidden;
+    background-repeat:no-repeat; */
+}
+
+#usIcon {
+    position: absolute;
+    top: 150px;
+    left: 825px;
+    background-color: transparent;
+    cursor:pointer;
+    border: none;
+    outline: none;
+    /* overflow: hidden;
+    background-repeat:no-repeat; */
+}
+
+#resourceLink {
+    position: absolute;
+    top: 400px;
+    left: 400px;
+}
+
+#resourceButton {
+    cursor: pointer;
+}

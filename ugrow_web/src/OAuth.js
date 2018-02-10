@@ -42,7 +42,7 @@ export default class GoogleAuth extends React.Component {
             // Render as Login button
             return (
                     // The whole thing is just a button, with the functionality included
-                    // NOTE: the button is kind of ugly but can deal with that part later 
+                    // NOTE: the button is kind of ugly but can deal with that part later    
                     <GoogleLogin 
                         clientId={WEB_CLIENT_ID}
                         buttonText="Login!"

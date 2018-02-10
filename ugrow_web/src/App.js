@@ -8,17 +8,18 @@ import API from './API'
 // Visual components
 import TopNav from './Nav';
 
-import Home from './Home';
-import About from './About';
-import Contact from './Contact';
-import Hiw from './Hiw';
-import Privacy from './Privacy';
-import Resources from './Resources';
-import Roots from './Roots';
-import Branches from './Branches';
-import Extras from './Extras';
-import Tree from './Tree';
-import Feed from './Feed';
+// Page Components
+import Home from './Home'
+import About from './About'
+import Contact from './Contact'
+import Hiw from './Hiw'
+import Privacy from './Privacy'
+import Resources from './Resources'
+import Roots from './Roots'
+import Branches from './Branches'
+import Extras from './Extras'
+import Tree from './Tree'
+import Feed from './Feed'
 
 class App extends Component {
 
