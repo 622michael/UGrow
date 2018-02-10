@@ -1,6 +1,8 @@
 body {
     font: 14px "Century Gothic", Futura, sans-serif;
-    margin: 20px;
+    margin: 0px;
+    background-image: url("./Main_Heading/MainBackground.png");
+    background-attachment: fixed;
 }
 
   

@@ -1,9 +1,12 @@
 import React from "react";
+import './Privacy.css';
+import privacyIcon from './Privacy_Page/PRIVACY.png'
+
 export default class Privacy extends React.Component {
   render() {
     return (
       <div id="privacy">
-        This is the Privacy Policy page.
+        <img src={privacyIcon} alt ="" id = "privacyIcon" />
       </div>
     );
   }

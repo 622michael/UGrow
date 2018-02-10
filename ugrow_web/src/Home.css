@@ -1,0 +1,54 @@
+ .home {
+  /*To support older browsers*/
+  height: 100%;
+  width: 100%;
+  
+  /* Set the height to match that of the viewport. */
+  height: 93vh;
+
+  /* Set the width to match that of the viewport. */
+  width: 98vw;    
+     
+  background-image: url("Home_Page/Logo.png");
+  background-repeat: no-repeat;
+  background-size: 43%;
+  background-position: center;
+  background-position-y: 75px;  
+} 
+
+#motto {
+  position: absolute;
+  left: 350px;
+  top: 550px;
+}
+
+#leaf1 {
+  position: absolute;
+  left: 1090px;
+  top: 470px;
+}
+#leaf2 {
+  position: absolute;
+  left: 1150px;
+  top: 560px;
+}
+#leaf3 {
+  position: absolute;
+  left: 1050px;
+  top: 570px;
+}
+#leaf4 {
+  position: absolute;
+  left: 250px;
+  top: 550px;
+}
+#leaf5 {
+  position: absolute;
+  left: 200px;
+  top: 475px;
+}
+#leaf6 {
+  position: absolute;
+  left: 150px;
+  top: 550px;
+}

@@ -1,22 +1,52 @@
-import React, { Component } from "react";
-import { NavLink } from 'reactstrap';
+import React, { Component } from "react"
+import { NavLink } from 'reactstrap'
+import './Feed.css'
+
+//png files
+import headingBox from './Feed_Page/Feed_Heading_Box.png'
+import feedB from './Feed_Page/Title_Feed_Back.png'
+import feedF from './Feed_Page/Title_Feed_Front.png'
+import feedLeaf from './Feed_Page/Feed_Leaf.png'
 
 export default class Feed extends Component {
+
+  doSomething = () => {
+    alert("you clicked the leaf!")
+  }
+
   render() {
     return (
-      <div id="feed">
-        This is the page dedicated to the feed.
-        <Footer />
+      <div className="feed">
+        <img src ={feedB} alt="" id ="feedB"/>
+        <img src ={feedF} alt="" id ="feedF"/>
+        {/* <img src={headingBox} alt="" id="headingBox"/> */}
+        <p>this is a test</p>
+        <p>this is a test</p>
+        <p>this is a test</p>
+        <p>
+          <button onClick = {this.doSomething} id = "feedLeaf">
+            <img src={feedLeaf} alt=""/>
+          </button>this is a test
+        </p>
+        <p>this is a test</p>
+        <p>this is a test</p>
+        <p>this is a test</p>
+        <p>this is a test</p>
+        <p>this is a test</p>
+        <p>this is a test</p>
+        <p>this is a test</p>
+        <p>this is a test</p>
+        <p>this is a test</p>
+        <p>this is a test</p>
+        <p>this is a test</p>
+        <p>this is a test</p>
+        <p>this is a test</p>
+        <p>this is a test</p>
+        <p>this is a test</p>
+        <p>this is a test</p>
+        
+          
       </div>
     );
   }
 }
-
-const Footer = () => (
-  <footer>
-      <button>
-          <NavLink href="/tree">Tree</NavLink>
-      </button>
-      <button>Feed</button>
-  </footer>    
-)
