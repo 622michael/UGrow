@@ -9,7 +9,7 @@
   /* Set the width to match that of the viewport. */
   width: 98vw;    
      
-  background-image: url("Home_Page/Logo.png");
+  background-image: url("/cssHome_Page/Logo.png");
   background-repeat: no-repeat;
   background-size: 43%;
   background-position: center;

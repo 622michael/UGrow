@@ -1,12 +1,11 @@
 import React, { Component } from "react"
-import { NavLink } from 'reactstrap'
 import './Feed.css'
 
 //png files
-import headingBox from './Feed_Page/Feed_Heading_Box.png'
-import feedB from './Feed_Page/Title_Feed_Back.png'
-import feedF from './Feed_Page/Title_Feed_Front.png'
-import feedLeaf from './Feed_Page/Feed_Leaf.png'
+/*import headingBox from './css/Feed_Page/Feed_Heading_Box.png'*/
+import feedB from './css/Feed_Page/Title_Feed_Back.png'
+import feedF from './css/Feed_Page/Title_Feed_Front.png'
+import feedLeaf from './css/Feed_Page/Feed_Leaf.png'
 
 export default class Feed extends Component {
 

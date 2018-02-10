@@ -1,5 +1,5 @@
 import React from 'react'
-import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink } from 'reactstrap'
+import { NavbarBrand, NavLink } from 'reactstrap'
 import GoogleAuth from './OAuth'
 import FaTree from 'react-icons/lib/fa/tree'
 

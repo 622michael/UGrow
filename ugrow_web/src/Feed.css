@@ -9,7 +9,7 @@
     /* Set the width to match that of the viewport. */
     width: 99vw;
 
-    background-image: url("./Feed_Page/Feed_Background.png");
+    background-image: url("./css/Feed_Page/Feed_Background.png");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: 100%;

@@ -2,10 +2,10 @@ import React from "react"
 import './Resources.css'
 
 //png files
-import resourcesIcon from './Resources_Page/RESOURCES.png'
-import lehighUIcon from './Resources_Page/LEHIGH_UNIVERSITY.png'
-import lehighVIcon from './Resources_Page/LEHIGH_VALLEY.png'
-import usIcon from './Resources_Page/UNITED_STATES.png' 
+import resourcesIcon from './css/Resources_Page/RESOURCES.png'
+import lehighUIcon from './css/Resources_Page/LEHIGH_UNIVERSITY.png'
+import lehighVIcon from './css/Resources_Page/LEHIGH_VALLEY.png'
+import usIcon from './css/Resources_Page/UNITED_STATES.png' 
 
 
 const tabStates = {
