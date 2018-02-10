@@ -36,6 +36,7 @@ export default class GoogleAuth extends React.Component {
         }).then(() => this.toggle());  
 
         console.log(theGoods);
+        window.location.href='/roots';
     }
 
     handleLogoutSuccess = () => this.toggle()

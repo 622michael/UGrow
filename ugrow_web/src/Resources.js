@@ -7,9 +7,12 @@ import lehighUIcon from './Resources_Page/LEHIGH_UNIVERSITY.png'
 import lehighVIcon from './Resources_Page/LEHIGH_VALLEY.png'
 import usIcon from './Resources_Page/UNITED_STATES.png' 
 
-/**
- * method for handling tab state needs to be determined. skeleton has been created though.
- */
+
+const tabStates = {
+  lehighU: 1,
+  lehighV: 2,
+  usa: 3,
+}
 export default class Resources extends React.Component {
   constructor(props){
     super(props)
@@ -18,20 +21,24 @@ export default class Resources extends React.Component {
       currentTab: 1,
     }
   }
+
   toLu = () => {
     this.setState({
-      currentTab: 1,
+      currentTab: tabStates.lehighU,
     })
+    alert(this.state.currentTab)
   }
   toLv = () => {
     this.setState({
-      currentTab: 2,
+      currentTab: tabStates.lehighV,
     })
+    alert(this.state.currentTab)
   }
   toUs = () => {
     this.setState({
-      currentTab: 3,
+      currentTab: tabStates.usa,
     })
+    alert(this.state.currentTab)
   }
 
   render() {
@@ -47,6 +54,9 @@ export default class Resources extends React.Component {
         <button id="usIcon" onClick={this.toUs}>
           <img src={usIcon} alt=""/>
         </button>
+        <a id="resourceLink" href="https://studentaffairs.lehigh.edu/content/pride-center-0">
+          <button id= "resourceButton">The Pride Center</button>
+        </a>
       </div>
     );
   }

@@ -39,3 +39,13 @@
     /* overflow: hidden;
     background-repeat:no-repeat; */
 }
+
+#resourceLink {
+    position: absolute;
+    top: 400px;
+    left: 400px;
+}
+
+#resourceButton {
+    cursor: pointer;
+}
