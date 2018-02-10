@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
-import { Route, Switch, Link } from 'react-router-dom'
-import './App.css';
+import { Route, Switch } from 'react-router-dom'
+
+// Style components
+import './css/App.css';
 
 // Service components
 import API from './API'
 
 // Visual components
-import TopNav from './Nav';
+import TopNav from './Nav'
 
 // Page Components
 import Home from './Home'

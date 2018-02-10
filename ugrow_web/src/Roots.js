@@ -1,8 +1,6 @@
-import React, { Component } from "react";
-import { NavLink, UncontrolledDropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
-import { ButtonGroup, DropdownButton, MenuItem } from "react-bootstrap";
-
-import API from './API';
+import React, { Component } from "react"
+import { NavLink, UncontrolledDropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap'
+import API from './API'
 
 export default class Roots extends Component {
   constructor(props){

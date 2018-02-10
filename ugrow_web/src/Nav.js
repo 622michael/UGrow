@@ -1,10 +1,9 @@
 import React from 'react'
-import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink } from 'reactstrap';
+import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink } from 'reactstrap'
 import GoogleAuth from './OAuth'
 import FaTree from 'react-icons/lib/fa/tree'
 
 
-import './Nav.css'
 // png files
 import homeButton from './Main_Heading/HOME.png'
 import aboutButton from './Main_Heading/DropDownMenu/ABOUT.png'
@@ -15,6 +14,8 @@ import signUpButton from './Main_Heading/DropDownMenu/SIGN_UP.png'
 import feedButton from './Main_Heading/DropDownMenu/FEED.png'
 import ddMenu from './Main_Heading/DropDownMenu/dropdownmenu.png'
 
+// Style components
+import './css/Nav.css';
 
 export default class TopNav extends React.Component {
   constructor(props) {
