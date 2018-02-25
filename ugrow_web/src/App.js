@@ -22,6 +22,7 @@ import Branches from './Branches'
 import Extras from './Extras'
 import Tree from './Tree'
 import Feed from './Feed'
+import admin from './admin'
 
 class App extends Component {
 
@@ -46,9 +47,12 @@ class App extends Component {
             <Route path='/extras' component={Extras}/>
             <Route path='/tree' component={Tree}/>
             <Route path='/feed' component={Feed}/>
+            <Route path='/admin' component={admin}/>
             <Route path='*' component={Home}/>
           </Switch>  
         </main>
+        
+        <treeModal />
       </div>
     );
   }

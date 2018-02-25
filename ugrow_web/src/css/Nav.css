@@ -1,9 +1,45 @@
-/* Button styles */
-nav button {
-    width: 60px;
+#ddMenu {
+    background-color: transparent;
+    cursor:pointer;
+    border: none;
+    outline: none;
+    /* overflow: hidden;
+    background-repeat:no-repeat; */
 }
 
-li {
-    width: 60px;
+#homeButton{
+    position: absolute;
+    top: 1.5%;
+    left: 5%;
 }
 
+#treeButton{
+    position: absolute;
+    left: 1000px;
+}
+
+#googleButton {
+    position: absolute;
+    left: 1060px;
+}
+
+#ddMenu {
+    position: absolute;
+    right: 5%;
+    top: 1.5%;
+}
+
+#adminLink {
+    position: absolute;
+    left: 500px;
+}
+
+.menu {
+    position: absolute;
+    background-image: url("./Main_Heading/DropDownMenu/DropDownBox.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    top: 8%;
+    right: 6%;
+}

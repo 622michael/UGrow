@@ -1,4 +1,4 @@
-import React, { Component } from "react"
+import React, { Component } from 'react'
 import { NavLink, UncontrolledDropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap'
 import API from './API'
 
@@ -76,19 +76,6 @@ const Header = () => (
         ROOTS -----> Branches -----> Extras
     </header> 
 )
-
-/* const Sex = () => (
-) */
-
-/* const Form = () => (
-    <form onSubmit={this.handleSubmit}>
-        <label>
-            Name:
-            <input type="text" value={this.state.value} onChange={this.handleChange} />
-        </label>
-        <input type="submit" value="Submit" />
-    </form>    
-) */
 
 const Footer = () => (
     <footer>

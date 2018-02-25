@@ -1,0 +1,23 @@
+.tree {
+    /*To support older browsers*/
+  height: 100%;
+  width: 100%;
+  
+  /* Set the height to match that of the viewport. */
+  height: 100vh;
+
+  /* Set the width to match that of the viewport. */
+  width: 100vw;   
+
+  background: url("User_Tree_Page/tree_background_page.png") no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+    /* background-image: url("User_Tree_Page/tree_background_page.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100%; */
+  } 
+  

@@ -1,5 +1,5 @@
 import React, { Component } from "react"
-import './Home.css'
+import './css/Home.css'
 import motto from './css/Home_Page/Motto.png'
 import leaf1 from './css/Home_Page/Leaf.1.png'
 import leaf2 from './css/Home_Page/Leaf.2.png'

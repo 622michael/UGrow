@@ -3,6 +3,17 @@ body {
     margin: 0px;
     background-image: url("./Main_Heading/MainBackground.png");
     background-attachment: fixed;
+
+
+  /*To support older browsers*/
+  height: 100%;
+  width: 100%;
+  
+  /* Set the height to match that of the viewport. */
+  height: 100vh;
+
+  /* Set the width to match that of the viewport. */
+  width: 100vw;   
 }
 
   

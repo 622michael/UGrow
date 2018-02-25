@@ -1,5 +1,5 @@
 import React from "react";
-import './Privacy.css';
+import './css/Privacy.css';
 import privacyIcon from './css/Privacy_Page/PRIVACY.png'
 
 export default class Privacy extends React.Component {

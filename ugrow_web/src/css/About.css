@@ -1,0 +1,49 @@
+#aboutIcon {
+    position: absolute;
+    left: 550px;
+    top: 80px;
+}
+
+#projectIcon {
+    position: absolute;
+    left: 460px;
+    top: 150px;
+    background-color: transparent;
+    cursor:pointer;
+    border: none;
+    outline: none;
+    /* overflow: hidden;
+    background-repeat:no-repeat; */
+}
+
+#teamIcon {
+    position: absolute;
+    left: 690px;
+    top: 150px;
+    background-color: transparent;
+    cursor:pointer;
+    border: none;
+    outline: none;
+    /* overflow: hidden;
+    background-repeat:no-repeat; */
+}
+
+p {
+    text-indent: 50px;
+    margin: 250px;
+
+    font-family: mr-eaves-modern, sans-serif;
+    font-style: normal;
+    font-weight: 100;
+    color: grey;
+}
+
+#aboutTeam {
+    position: absolute;
+    top: 200px;
+}
+
+#aboutProject {
+    position: absolute;
+    top: 200px;
+}

@@ -1,5 +1,5 @@
 import React from "react"
-import './Resources.css'
+import './css/Resources.css'
 
 //png files
 import resourcesIcon from './css/Resources_Page/RESOURCES.png'

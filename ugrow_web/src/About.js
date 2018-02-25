@@ -1,5 +1,5 @@
 import React from "react";
-import './About.css'
+import './css/About.css'
 
 //png files
 import aboutIcon from './css/About_Page/ABOUT.png'

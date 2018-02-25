@@ -1,5 +1,5 @@
 import React, { Component } from "react"
-import './Feed.css'
+import './css/Feed.css'
 
 //png files
 /*import headingBox from './css/Feed_Page/Feed_Heading_Box.png'*/
