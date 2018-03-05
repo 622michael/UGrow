@@ -15,20 +15,20 @@ module.exports = {
       email: {
         type: Sequelize.STRING
       },
-      userId: {
-        allowNull: false,
-        unique: true,
-        type: Sequelize.INTEGER
-      }, 
-      expireTime: {
-        allowNull: false,
-        type: Sequelize.INTEGER,
-      },
-      id_token: {
-        allowNull: false,
-        unique: true,
-        type: Sequelize.STRING
-      },
+      // userId: {
+      //   allowNull: false,
+      //   unique: true,
+      //   type: Sequelize.INTEGER
+      // }, 
+      // expireTime: {
+      //   allowNull: false,
+      //   type: Sequelize.INTEGER,
+      // },
+      // id_token: {
+      //   allowNull: false,
+      //   unique: true,
+      //   type: Sequelize.STRING
+      // },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE

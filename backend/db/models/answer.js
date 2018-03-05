@@ -12,6 +12,7 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false
       }
     })
+    models.Answer.belongsTo(models.User)
   }
 
   return Answer;
