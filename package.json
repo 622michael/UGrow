@@ -1,5 +1,24 @@
 {
-    "scripts": {
-        "start": "node ./backend/bin/www"
-    }
+  "name": "ugrow",
+  "version": "1.0.0",
+  "description": "Everything we need for u and growing.",
+  "main": "index.js",
+  "dependencies": {
+    "google-auth-library": "^0.12.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "node ./backend/bin/www",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mjammy/UGrow.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mjammy/UGrow/issues"
+  },
+  "homepage": "https://github.com/mjammy/UGrow#readme"
 }
