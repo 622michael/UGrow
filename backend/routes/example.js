@@ -17,7 +17,7 @@ router.get('/resources', function(req, res) {
 	// models.Resource.findAll().then(resources => console.log(resources));
 	models.sequelize.query("select * from resources", { type: models.sequelize.QueryTypes.SELECT}).then(resources => {
 		console.log(resources)
-		res.send({ resources })
+		res.json({ resources })
 	});
 })
 
