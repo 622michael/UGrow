@@ -1,6 +1,8 @@
 var express = require('express')
 var router = express.Router()
-var { sequelize, Answer, Question } = require('../db/models')
+var { sequelize, answer, question } = require('../db/models')
+// var test = require('../db/models')
+// console.log(test)
 
 router.use(function timeLog(req, res, next){
 	// This function is called whenever the router is used
@@ -14,7 +16,7 @@ router.get('/', function(req, res) {
 })
 
 router.get('/feed', function(req, res) {
-	Answer.findAll({ limit: 20 }).then(answers => res.json(answers))
+	answer.findAll({ limit: 20 }).then(answers => res.json(answers))
 })
 
 router.get('/resources', function(req, res) {
@@ -25,14 +27,14 @@ router.get('/resources', function(req, res) {
 })
 
 // check that user is logged in
-router.use('/', function(req, res, next) {
-	if (req.user) next();
-	else res.send(false)
-})
+// router.use('/', function(req, res, next) {
+// 	if (req.user) next();
+// 	else res.send(false)
+// })
 
 router.get('/answers/:branch_or_root', function(req, res) {
-	Answer.findAll({
-		include: Question,
+	answer.findAll({
+		include: question,
 		where: {
 			branch_or_root: req.params.branch_or_root
 		}
@@ -40,7 +42,7 @@ router.get('/answers/:branch_or_root', function(req, res) {
 })
 
 router.get('/questions/:branch_or_route', function(req, res) {
-	Question.findAll({
+	question.findAll({
 		where: {
 			branch_or_root: req.params.branch_or_root
 		}
@@ -48,11 +50,12 @@ router.get('/questions/:branch_or_route', function(req, res) {
 })
 
 router.post('/answer', function(req, res) {
-	Answer.create(req.body).then(result => res.json({ success: true} ))
+	console.log(req.body);
+	answer.create(req.body).then(result => res.json({ success: true} ))
 })
 
 router.post('/question', function(req, res) {
-	Question.create(req.body).then(res.json).then(result => res.json({ success: true }))
+	question.create(req.body).then(result => res.json({ success: true }))
 })
 
 module.exports = router

@@ -1,6 +1,8 @@
 create type locale as enum ('LU', 'LV', 'US');
 create table resources (
     id serial primary key,
+    "createdAt" TIMESTAMP,
+    "updatedAt" TIMESTAMP,
     name text,
     url text,
     scope text
