@@ -13,7 +13,8 @@
   "devDependencies": {},
   "scripts": {
     "start": "node ./backend/bin/www",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon ./backend/bin/www"
   },
   "repository": {
     "type": "git",
