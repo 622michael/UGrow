@@ -37,7 +37,6 @@ export default class TopNav extends React.Component {
       return (
         <div>
             <NavbarBrand href="/" id="homeButton"> <img src={homeButton} alt=""/> </NavbarBrand>
-            <NavLink href="/roots">Roots</NavLink>
             <button id="treeButton">
               <NavLink href="/tree">
                 <FaTree />
@@ -57,7 +56,6 @@ export default class TopNav extends React.Component {
       return (
         <div>
             <NavbarBrand href="/" id="homeButton"> <img src={homeButton} alt=""/> </NavbarBrand>
-            <NavLink href="/roots">Roots</NavLink>
             <button id="treeButton">
               <NavLink href="/tree">
                 <FaTree />
