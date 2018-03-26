@@ -10,25 +10,31 @@ export default class About extends React.Component {
   constructor(props){
     super(props);
     this.state = {
-      leftSideClicked: false,
+      leftSide: false,
     }
   }
 
-  toggle = () => {
+  switchRight = () => {
     this.setState({
-        leftSideClicked: !this.state.leftSideClicked,
+        leftSide: false,
+    })
+  }
+
+  switchLeft = () => {
+    this.setState({
+        leftSide: true,
     })
   }
 
   render() {
-    if (!this.state.leftSideClicked){
+    if (!this.state.leftSide){
       return (
         <div id="about">
           <img src={aboutIcon} alt="" id="aboutIcon"/>
-          <button id="projectIcon" onClick={this.toggle}>
+          <button id="projectIcon" onClick={this.switchLeft}>
             <img src={projectIcon} alt=""/>
           </button>
-          <button id="teamIcon" onClick={this.toggle}>
+          <button id="teamIcon" onClick={this.switchRight}>
             <img src={teamIcon} alt=""/>
           </button>
           <div id="aboutTeam">
@@ -60,10 +66,10 @@ export default class About extends React.Component {
       return(
         <div id="about">
           <img src={aboutIcon} alt="" id="aboutIcon"/>
-          <button id="projectIcon" onClick={this.toggle}>
+          <button id="projectIcon" onClick={this.switchLeft}>
             <img src={projectIcon} alt=""/>
           </button>
-          <button id="teamIcon" onClick={this.toggle}>
+          <button id="teamIcon" onClick={this.switchRight}>
             <img src={teamIcon} alt=""/>
           </button>
           <div id="aboutProject">

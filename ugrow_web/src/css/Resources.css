@@ -49,3 +49,26 @@
 #resourceButton {
     cursor: pointer;
 }
+
+.links {
+    position: absolute;
+    top: 32%;
+    left: 10%;
+    right: 10%;
+    
+    
+}
+.links a{
+    position: relative;
+    text-align: center;
+}
+.centered {
+    font-family: mr-eaves-modern, sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    color: #a0a0a0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

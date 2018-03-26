@@ -15,12 +15,14 @@
 
 #treeButton{
     position: absolute;
-    left: 1000px;
+    top: 1%;
+    right: 23%;
 }
 
 #googleButton {
     position: absolute;
-    left: 1060px;
+    right: 8.5%;
+    top: 1%;
 }
 
 #ddMenu {
@@ -31,7 +33,7 @@
 
 #adminLink {
     position: absolute;
-    left: 500px;
+    left: 50%;
 }
 
 .menu {

@@ -29,11 +29,10 @@
 }
 
 p {
-    text-indent: 50px;
     font-family: mr-eaves-modern, sans-serif;
     font-style: normal;
-    font-weight: 100;
-    color: grey;
+    font-weight: 300;
+    color: #a0a0a0;
 }
 
 #aboutTeam {

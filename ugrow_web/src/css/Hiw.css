@@ -1,0 +1,56 @@
+#hiwHeader {
+    position: absolute;
+    font-family: futura-pt, sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 41pt;
+    color: #37c2c3;
+    top: 12%;
+    left: 33.75%
+}
+
+#uHiw {
+    position: absolute;
+    top: 32%;
+    left: 18%;
+    right: 18%;
+}
+
+#weHiw {
+    position: absolute;
+    top: 32%;
+    left: 20%;
+    right: 20%;
+}
+
+#weGrowIcon {
+    position: absolute;
+    left: 34%;
+    top: 24%;
+    background-color: transparent;
+    cursor:pointer;
+    border: none;
+    outline: none;
+    font-family: mr-eaves-modern, sans-serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 20pt;
+    /* overflow: hidden;
+    background-repeat:no-repeat; */
+}
+
+#uGrowIcon {
+    position: absolute;
+    left: 58%;
+    top: 24%;
+    background-color: transparent;
+    cursor:pointer;
+    border: none;
+    outline: none;
+    font-family: mr-eaves-modern, sans-serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 20pt;
+    /* overflow: hidden;
+    background-repeat:no-repeat; */
+}

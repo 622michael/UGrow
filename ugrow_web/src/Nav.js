@@ -36,6 +36,7 @@ export default class TopNav extends React.Component {
     if (this.state.collapsed){
       return (
         <div>
+            <NavLink href="/roots">rooooots</NavLink>
             <NavbarBrand href="/" id="homeButton"> <img src={homeButton} alt=""/> </NavbarBrand>
             <button id="treeButton">
               <NavLink href="/tree">

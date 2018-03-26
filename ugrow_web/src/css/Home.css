@@ -13,42 +13,42 @@
   background-repeat: no-repeat;
   background-size: 43%;
   background-position: center;
-  background-position-y: 75px;  
+  background-position-y: 32%;  
 } 
 
 #motto {
   position: absolute;
-  left: 350px;
-  top: 550px;
+  left: 25.5%;
+  bottom: 9%;
 }
 
 #leaf1 {
   position: absolute;
-  left: 1090px;
-  top: 470px;
+  right: 15.25%;
+  bottom: 14%;
 }
 #leaf2 {
   position: absolute;
-  left: 1150px;
-  top: 560px;
+  right: 13%;
+  bottom: 5%;
 }
 #leaf3 {
   position: absolute;
-  left: 1050px;
-  top: 570px;
+  right: 19.5%;
+  bottom: 3%;
 }
 #leaf4 {
   position: absolute;
-  left: 250px;
-  top: 550px;
+  left: 18.4%;
+  bottom: 6%;
 }
 #leaf5 {
   position: absolute;
-  left: 200px;
-  top: 475px;
+  left: 14.6%;
+  bottom: 17.5%;
 }
 #leaf6 {
   position: absolute;
-  left: 150px;
-  top: 550px;
+  left: 11%;
+  bottom: 3%;
 }
