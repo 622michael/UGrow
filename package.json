@@ -8,11 +8,36 @@
   "description": "Everything we need for u and growing.",
   "main": "./backend/bin/www",
   "dependencies": {
+    "body-parser": "^1.18.2",
+    "db-migrate": "^0.10.5",
+    "db-migrate-pg": "^0.3.1",
+    "express": "^4.16.2",
+    "is-alphanumeric": "^1.0.0",
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0",
+    "pg": "^6.4.2",
+    "pg-hstore": "^2.3.2",
+    "request": "^2.83.0",
+    "sequelize": "^4.28.6",
+    "sequelize-to-json": "^0.10.3",
+    "bootstrap": "^4.0.0-alpha.6",
+    "react": "^16.2.0",
+    "react-bootstrap": "^0.32.0",
+    "react-dom": "^16.2.0",
+    "react-google-login": "^3.0.2",
+    "react-google-oauth": "^1.0.0",
+    "react-icons": "^2.2.7",
+    "react-modal": "^3.3.1",
+    "react-router-dom": "^4.2.2",
+    "react-scripts": "1.0.17",
+    "react-transition-group": "^2.2.1",
+    "reactstrap": "^4.8.0",
     "google-auth-library": "^0.12.0"
   },
   "devDependencies": {},
   "scripts": {
-    "start": "node ./backend/bin/www",
+    "build": "react-scripts build",
+    "start": "react-scripts build && node ./backend/bin/www",
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon ./backend/bin/www"
   },
@@ -25,5 +50,5 @@
   "bugs": {
     "url": "https://github.com/mjammy/UGrow/issues"
   },
-  "homepage": "https://github.com/mjammy/UGrow#readme"
+  "homepage": "https://github.com/build"
 }

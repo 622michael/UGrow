@@ -11,10 +11,6 @@ router.use(function timeLog(req, res, next){
 	next()
 })
 
-router.get('/', function(req, res) {
-	res.send("Welcome to my routing services!")
-})
-
 router.get('/feed', function(req, res) {
 	answer.findAll({ limit: 20 }).then(answers => res.json(answers))
 })

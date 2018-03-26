@@ -15,13 +15,15 @@ backend/pids
 
 backend/build/Release
 
-backend/node_modules/
+ugrow_web/node_modules
+node_modules
 backend/jspm_packages/
 
 backend/package-lock.json
 
 backend/db/config/config.json
 
+build
 
 .npm
 

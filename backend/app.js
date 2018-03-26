@@ -1,5 +1,6 @@
 const express = require('express')
 const app = express()
+const path = require('path')
 
 const routes = require("./routes/routes")
 const auth = require("./routes/auth")
@@ -29,5 +30,8 @@ app.use('/', auth)
 app.use('/', routes)
 // app.use('/answer', answerRoute)
 
+app.use('/', function(req, res) {
+  res.sendFile(path.resolve(__dirname + "/../build/index.html"))
+})
 
 module.exports = app
