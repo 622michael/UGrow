@@ -1,6 +1,12 @@
+/* Headers */
+
+.headers a {
+    cursor: pointer;
+}
+
 #resourcesIcon {
     position: absolute;
-    left:500px;
+    left: 500px;
     top: 80px;
 }
 
@@ -8,24 +14,12 @@
     position: absolute;
     top: 150px;
     left: 225px;
-    background-color: transparent;
-    cursor:pointer;
-    border: none;
-    outline: none;
-    /* overflow: hidden;
-    background-repeat:no-repeat; */
 }
 
 #lehighVIcon {
     position: absolute;
     top: 150px;
     left: 550px;
-    background-color: transparent;
-    cursor:pointer;
-    border: none;
-    outline: none;
-    /* overflow: hidden;
-    background-repeat:no-repeat; */
 }
 
 #usIcon {
@@ -36,16 +30,23 @@
     cursor:pointer;
     border: none;
     outline: none;
-    /* overflow: hidden;
-    background-repeat:no-repeat; */
 }
 
-#resourceLink {
+/* Links */
+
+.links {
     position: absolute;
-    top: 400px;
-    left: 400px;
+    top: 250px;
 }
 
-#resourceButton {
-    cursor: pointer;
+.links a{
+    position: relative;
+    text-align: center;
+}
+
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }

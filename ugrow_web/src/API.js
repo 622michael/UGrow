@@ -1,7 +1,13 @@
 import React from 'react';
 
-export const MYJSON_TEST_URL = 'https://api.myjson.com/bins/10oh0j';
+// Get
+export const ROOTS_QUESTION_TEST_URL = 'https://api.myjson.com/bins/125zn5'
+export const RESOURCES_TEST_URL = 'https://api.myjson.com/bins/1cn7w1'
+export const RESOURCES_ROUTE = 'https://20a0ca07.ngrok.io/resources'
+
+// Post
 export const USER_POST_URL = '/OAuth/login'
+export const ANSWER_POST_TEST_ROUTE = 'https://3355765a.ngrok.io/answer'
 
 
 export default class API extends React.Component {
@@ -29,7 +35,7 @@ export default class API extends React.Component {
     ///////////////////////////////////
 
     static get questionData() {
-        return fetch(MYJSON_TEST_URL)
+        return fetch(ROOTS_QUESTION_TEST_URL)
         .then(response => response.json()) 
         .then(json => {
             let qData = json.questions;
@@ -37,5 +43,38 @@ export default class API extends React.Component {
             return qData;
         }) 
         .catch(caught => console.log("Caught error getting question data: " + caught))
+    }
+
+    static postAnswer(qID, uID, content) {
+        console.log(qID+","+uID+","+content);
+        fetch(ANSWER_POST_TEST_ROUTE, {
+            method: 'POST',
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify( {
+                question_id:qID,
+                user_id:uID,
+                content:content
+            })
+        })
+        .then((res) => res.json())
+        .then((data) => console.log(data))
+        .catch((err)=> console.log(err))
+    }
+
+    ///////////////////////////////////
+    //// RESOURCE-RELATED REQUESTS ////
+    ///////////////////////////////////
+
+    static get resourceData() {
+        return fetch(RESOURCES_TEST_URL)
+        .then(response => response.json()) 
+        .then(json => {
+            let resourceData = json.resources;
+            console.log(resourceData);
+            return resourceData;
+        }) 
+        .catch(caught => console.log("Caught error getting resource data: " + caught))
     }
 }
