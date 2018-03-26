@@ -1,9 +1,12 @@
 import React from "react";
+import './css/Hiw.css';
 export default class Hiw extends React.Component {
   render() {
     return (
       <div id="hiw">
-        This is the How it Works page.
+        <div id="hiwHeader">
+          How it Works
+        </div>
       </div>
     );
   }
