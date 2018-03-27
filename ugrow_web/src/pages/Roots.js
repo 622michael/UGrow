@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { NavLink } from 'reactstrap'
-import API from './API'
+import API from '../API'
 
 export default class Roots extends Component {
     constructor(props) {

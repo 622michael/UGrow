@@ -1,9 +1,9 @@
 import React from 'react';
 import {GoogleLogin, GoogleLogout} from 'react-google-login';
-import API from './API';
-import './css/OAuth.css'
+import API from '../API';
+import '../css/OAuth.css'
 
-import loginIcon from './css/Main_Heading/SIGN_IN.png'
+import loginIcon from '../css/Main_Heading/SIGN_IN.png'
 
 const WEB_CLIENT_ID = '520933852537-7kp1tqiq1jl8qddoj9vsoh8rvu2a1tha.apps.googleusercontent.com';
 

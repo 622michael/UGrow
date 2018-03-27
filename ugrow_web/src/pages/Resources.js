@@ -1,13 +1,13 @@
 import React from "react"
-import './css/Resources.css'
-import API from './API'
+import '../css/Resources.css'
+import API from '../API'
 
 //png files
-import resourcesIcon from './css/Resources_Page/RESOURCES.png'
-import lehighUIcon from './css/Resources_Page/LEHIGH_UNIVERSITY.png'
-import lehighVIcon from './css/Resources_Page/LEHIGH_VALLEY.png'
-import usIcon from './css/Resources_Page/UNITED_STATES.png' 
-import resourceButton from './css/Resources_Page/RESOURCE_BUTTON.png'
+import resourcesIcon from '../css/Resources_Page/RESOURCES.png'
+import lehighUIcon from '../css/Resources_Page/LEHIGH_UNIVERSITY.png'
+import lehighVIcon from '../css/Resources_Page/LEHIGH_VALLEY.png'
+import usIcon from '../css/Resources_Page/UNITED_STATES.png' 
+import resourceButton from '../css/Resources_Page/RESOURCE_BUTTON.png'
 
 const tabStates = {
   lehighU: 1,

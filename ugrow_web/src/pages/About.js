@@ -1,10 +1,10 @@
 import React from "react";
-import './css/About.css'
+import '../css/About.css'
 
 //png files
-import aboutIcon from './css/About_Page/ABOUT.png'
-import projectIcon from './css/About_Page/THE_PROJECT.png'
-import teamIcon from './css/About_Page/THE_TEAM.png'
+import aboutIcon from '../css/About_Page/ABOUT.png'
+import projectIcon from '../css/About_Page/THE_PROJECT.png'
+import teamIcon from '../css/About_Page/THE_TEAM.png'
 
 export default class About extends React.Component {
   constructor(props){

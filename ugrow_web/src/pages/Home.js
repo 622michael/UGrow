@@ -1,12 +1,12 @@
 import React, { Component } from "react"
-import './css/Home.css'
-import motto from './css/Home_Page/Motto.png'
-import leaf1 from './css/Home_Page/Leaf.1.png'
-import leaf2 from './css/Home_Page/Leaf.2.png'
-import leaf3 from './css/Home_Page/Leaf.3.png'
-import leaf4 from './css/Home_Page/Leaf.4.png'
-import leaf5 from './css/Home_Page/Leaf.5.png'
-import leaf6 from './css/Home_Page/Leaf.6.png'
+import '../css/Home.css'
+import motto from '../css/Home_Page/Motto.png'
+import leaf1 from '../css/Home_Page/Leaf.1.png'
+import leaf2 from '../css/Home_Page/Leaf.2.png'
+import leaf3 from '../css/Home_Page/Leaf.3.png'
+import leaf4 from '../css/Home_Page/Leaf.4.png'
+import leaf5 from '../css/Home_Page/Leaf.5.png'
+import leaf6 from '../css/Home_Page/Leaf.6.png'
 
 export default class Home extends Component {
   render() {

@@ -1,8 +1,8 @@
 import React, { Component } from "react"
 import ReactModal from 'react-modal'
-import './css/userInput.css'
+import '../css/userInput.css'
 
-import myTreeButton from './css/User_Tree_Page/Edit_my_tree_button.png'
+import myTreeButton from '../css/User_Tree_Page/Edit_my_tree_button.png'
 
 export default class userInput extends Component {
   constructor(props) {

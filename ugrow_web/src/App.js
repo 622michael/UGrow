@@ -8,20 +8,20 @@ import './css/App.css';
 import API from './API'
 
 // Visual components
-import TopNav from './Nav'
+import TopNav from './components/Nav'
 
 // Page Components
-import Home from './Home'
-import About from './About'
-import Contact from './Contact'
-import Hiw from './Hiw'
-import Privacy from './Privacy'
-import Resources from './Resources'
-import Roots from './Roots'
-import Branches from './Branches'
-import Extras from './Extras'
-import Tree from './Tree'
-import Feed from './Feed'
+import Home from './pages/Home'
+import About from './pages/About'
+import Contact from './pages/Contact'
+import Hiw from './pages/Hiw'
+import Privacy from './pages/Privacy'
+import Resources from './pages/Resources'
+import Roots from './pages/Roots'
+import Branches from './pages/Branches'
+import Extras from './pages/Extras'
+import Tree from './pages/Tree'
+import Feed from './components/Feed'
 import admin from './admin'
 
 class App extends Component {

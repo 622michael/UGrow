@@ -9,17 +9,11 @@
     /* Set the width to match that of the viewport. */
     width: 99vw;
 
-    background-image: url("./Feed_Page/Feed_Background.png");
-    background-repeat: no-repeat;
+    background-image: url("../css/Feed_Page/Feed_Background.png");
+    background-repeat: repeat;
     background-attachment: fixed;
     background-size: 100%;
 }
-
-/* #headingBox {
-    position: absolute;
-    top: 500px;
-    left: 0px;
-} */
 
 #feedB {
     position: absolute;
@@ -38,8 +32,7 @@
     cursor:pointer;
     border: none;
     outline: none;
-    /* overflow: hidden;
-    background-repeat:no-repeat; */
+    size: 50%;
 }
 
 p {

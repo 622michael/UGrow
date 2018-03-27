@@ -1,5 +1,5 @@
 import React from "react";
-import './css/Hiw.css';
+import '../css/Hiw.css';
 export default class Hiw extends React.Component {
   constructor(props){
     super(props);
