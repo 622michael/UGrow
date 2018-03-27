@@ -4,6 +4,7 @@ import React from 'react';
 export const ROOTS_QUESTION_TEST_URL = 'https://api.myjson.com/bins/125zn5'
 export const RESOURCES_TEST_URL = 'https://api.myjson.com/bins/1cn7w1'
 export const RESOURCES_ROUTE = 'https://20a0ca07.ngrok.io/resources'
+export const FEED_TEST_ROUTE = 'https://api.myjson.com/bins/s9vtj'
 
 // Post
 export const USER_POST_URL = '/OAuth/login'
@@ -61,6 +62,17 @@ export default class API extends React.Component {
         .then((res) => res.json())
         .then((data) => console.log(data))
         .catch((err)=> console.log(err))
+    }
+
+    static get feedData() {
+        return fetch(FEED_TEST_ROUTE)
+        .then(response => response.json()) 
+        .then(json => {
+            let feedData = json.feed;
+            console.log(feedData);
+            return feedData;
+        }) 
+        .catch(caught => console.log("Caught error loading feed: " + caught))
     }
 
     ///////////////////////////////////
