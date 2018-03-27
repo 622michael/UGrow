@@ -9,10 +9,10 @@
   /* Set the width to match that of the viewport. */
   width: 100vw;
 
-  background-image: url("/css/User_Tree_Page/tree_background_page.png");
+  background-image: url("./User_Tree_Page/tree_background_page.png");
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-size: 90%;
+  background-size: cover;
 }
 
 .onoffswitch {
