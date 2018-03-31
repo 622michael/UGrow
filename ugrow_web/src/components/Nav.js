@@ -35,7 +35,7 @@ export default class TopNav extends React.Component {
   render() {
     if (this.state.collapsed){
       return (
-        <div>
+        <div className ="Nav">
             <NavLink href="/roots">rooooots</NavLink>
             <NavbarBrand href="/" id="homeButton"> <img src={homeButton} alt=""/> </NavbarBrand>
             <button id="treeButton">
@@ -55,7 +55,7 @@ export default class TopNav extends React.Component {
     }
     else {
       return (
-        <div>
+        <div className ="Nav">
             <NavbarBrand href="/" id="homeButton"> <img src={homeButton} alt=""/> </NavbarBrand>
             <button id="treeButton">
               <NavLink href="/tree">

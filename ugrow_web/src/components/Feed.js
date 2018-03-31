@@ -1,12 +1,12 @@
 import React, { Component } from "react"
 import '../css/Feed.css'
 import API from '../API'
+import ProfileModal from './profileTree'
 
 //png files
-/*import headingBox from './css/Feed_Page/Feed_Heading_Box.png'*/
 import feedB from '../css/Feed_Page/Title_Feed_Back.png'
 import feedF from '../css/Feed_Page/Title_Feed_Front.png'
-import feedLeaf from '../css/Feed_Page/Feed_Leaf.png'
+//import topBox from '../css/Feed_Page/Feed_Heading_Box.png'
 
 export default class Feed extends Component {
 
@@ -15,45 +15,47 @@ export default class Feed extends Component {
     this.state = {
         feedPosts: [],
     };
-
-    //this.handleChange = this.handleChange.bind(this);
-}
-
-  doSomething = () => {
-    alert("you clicked the leaf!")
   }
 
   loadFeed = (feed) => {
     let feedPosts = feed.map((f) => {
         return (
             <p key={f.id} >
-                <button onClick = {this.doSomething} id = "feedLeaf">
-                  <img src={feedLeaf} alt=""/>
-                </button>
+                <ProfileModal/>
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
                 Q:{f.question}
-                <br/>  
+                <br/> 
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp; 
                 A:{f.answer}
                 submitted by: {f.username}
             </p>
         )
     })
     this.setState({ feedPosts: feedPosts });
-}
+  }
 
-componentWillMount() {
-    API.feedData.then(questions => this.loadFeed(questions));
-}
+  componentWillMount() {
+      API.feedData.then(questions => this.loadFeed(questions));
+  }
 
   render() {
     return (
       <div className="feed">
-        <img src ={feedB} alt="" id ="feedB"/>
-        <img src ={feedF} alt="" id ="feedF"/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        {this.state.feedPosts}      
+          <img src ={feedB} alt="" id ="feedB"/>
+          <img src ={feedF} alt="" id ="feedF"/>
+        <div className="feedBounds">
+          {this.state.feedPosts}
+        </div>
       </div>
     );
   }

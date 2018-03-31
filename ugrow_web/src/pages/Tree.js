@@ -5,7 +5,6 @@ import TreeModal from '../components/userInput'
 import SwitchButton from 'react-switch-button'
 import '../css/Tree.css'
 
-import treeButton from '../css/User_Tree_Page/Edit_my_tree_button.png'
 
 export default class Tree extends Component {
   constructor(props) {
