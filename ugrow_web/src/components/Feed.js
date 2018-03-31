@@ -20,25 +20,23 @@ export default class Feed extends Component {
     let feedPosts = feed.map((f) => {
         return (
             <p key={f.id} >
-                <ProfileModal/>
-                <p id="feedText">
-                  Q:{f.question}
-                  <br/> 
-                  A:{f.answer}
-                  testtesttesttesttesttesttesttesttesttesttesttest
-                  testtesttesttesttesttesttesttesttesttesttesttest
-                  testtesttesttesttesttesttesttesttesttesttesttest
-                  testtesttesttesttesttesttesttesttesttesttesttest
-                  testtesttesttesttesttesttesttesttesttesttesttest
-                  testtesttesttesttesttesttesttesttesttesttesttest
-                  testtesttesttesttesttesttesttesttesttesttesttest
-                  testtesttesttesttesttesttesttesttesttesttesttest
-                  testtesttesttesttesttesttesttesttesttesttesttest
-                  testtesttesttesttesttesttesttesttesttesttesttest
-                  testtesttesttesttesttesttesttesttesttesttesttest
-                  testtesttesttesttesttesttesttesttesttesttesttest
-                  submitted by: {f.username}
-                </p>
+                <ProfileModal user={f.username}/>
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                Q:{f.question}
+                <br/> 
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp; 
+                A:{f.answer}
+                submitted by: {f.username}
             </p>
         )
     })
