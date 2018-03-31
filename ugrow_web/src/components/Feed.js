@@ -21,7 +21,7 @@ export default class Feed extends Component {
     let feedPosts = feed.map((f) => {
         return (
             <p key={f.id} >
-                <ProfileModal/>
+                <ProfileModal user={f.username}/>
                 &nbsp;
                 &nbsp;
                 &nbsp;

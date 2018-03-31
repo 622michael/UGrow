@@ -4,7 +4,7 @@ import React from 'react';
 export const ROOTS_QUESTION_TEST_URL = 'https://api.myjson.com/bins/125zn5'
 export const RESOURCES_TEST_URL = 'https://api.myjson.com/bins/1cn7w1'
 export const RESOURCES_ROUTE = 'https://20a0ca07.ngrok.io/resources'
-export const FEED_TEST_ROUTE = 'https://api.myjson.com/bins/s9vtj'
+export const FEED_TEST_ROUTE = 'https://api.myjson.com/bins/1b3jt3'
 
 // Post
 export const USER_POST_URL = '/OAuth/login'
