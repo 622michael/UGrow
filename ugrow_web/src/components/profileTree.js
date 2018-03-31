@@ -31,7 +31,7 @@ export default class profileTree extends Component {
                 Q:{f.question}
                 <br/> 
                 A:{f.answer}
-                submitted by: {f.username}
+                submitted by:{f.username}
             </p>
         )
     })
