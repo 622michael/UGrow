@@ -1,0 +1,26 @@
+.Modal {
+    position: absolute;
+    top: 0%;
+    left: 7%;
+    right: 3%;
+    bottom: 2%;
+    background-image: url("User_Tree_Page/tabs/Pop-up_window.png");
+    background-size: 95%;
+    background-repeat: no-repeat;
+  }
+
+  .Overlay {
+    position: fixed;
+    top: 7%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+
+  #leafButton {
+    position: relative;
+    background-color: transparent;
+    cursor:pointer;
+    border: none;
+    outline: none;
+  }

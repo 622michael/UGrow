@@ -7,24 +7,28 @@
     height: 100vh;
   
     /* Set the width to match that of the viewport. */
-    width: 99vw;
+    width: 100vw;
 
-    background-image: url("../css/Feed_Page/Feed_Background.png");
-    background-repeat: repeat;
-    background-attachment: fixed;
-    background-size: 100%;
+    background-image: url("./Feed_Page/Feed_Heading_Box.png");
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+}
+
+.feedBounds {
+    position: absolute;
+    top: 22%;
 }
 
 #feedB {
     position: absolute;
-    top: 21px;
-    left: 472px;
+    top: 3.4%;
+    left: 35%;
 }
 
 #feedF {
     position: absolute;
-    top: 20px;
-    left: 475px;
+    top: 3.2%;
+    left: 35.2%;
 }
 
 #feedLeaf {
@@ -37,4 +41,9 @@
 
 p {
     font-size: 12pt;
+    font-family: mr-eaves-modern, sans-serif;
+    font-style: italic;
+    font-weight: 400;
+    color: #2b522b;
+    width: 100%;
 }
