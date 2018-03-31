@@ -1,3 +1,7 @@
+.profileModal{
+  float: left;
+}
+
 .Modal {
     position: absolute;
     top: 0%;

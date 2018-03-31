@@ -25,7 +25,7 @@ export default class profileTree extends Component {
   
   render() {
     return (
-        <div>
+        <div className="profileModal">
           <button id ="leafButton" onClick={this.handleOpenMod}><img src={feedLeaf} alt=""/></button>
           <ReactModal
             isOpen={this.state.showMod}
