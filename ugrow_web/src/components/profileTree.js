@@ -2,7 +2,7 @@ import React, { Component } from "react"
 import ReactModal from 'react-modal'
 import '../css/profileTree.css'
 
-import feedLeaf from '../css/Feed_Page/Feed_Leaf.png'
+import feedLeaf from '../css/Feed_Page/Feed_Leaf3.png'
 
 export default class profileTree extends Component {
   constructor(props) {

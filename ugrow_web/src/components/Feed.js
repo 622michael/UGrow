@@ -6,7 +6,6 @@ import ProfileModal from './profileTree'
 //png files
 import feedB from '../css/Feed_Page/Title_Feed_Back.png'
 import feedF from '../css/Feed_Page/Title_Feed_Front.png'
-//import topBox from '../css/Feed_Page/Feed_Heading_Box.png'
 
 export default class Feed extends Component {
 
@@ -22,22 +21,24 @@ export default class Feed extends Component {
         return (
             <p key={f.id} >
                 <ProfileModal/>
-                &nbsp;
-                &nbsp;
-                &nbsp;
-                &nbsp;
-                &nbsp;
-                &nbsp;
-                Q:{f.question}
-                <br/> 
-                &nbsp;
-                &nbsp;
-                &nbsp;
-                &nbsp;
-                &nbsp;
-                &nbsp; 
-                A:{f.answer}
-                submitted by: {f.username}
+                <p id="feedText">
+                  Q:{f.question}
+                  <br/> 
+                  A:{f.answer}
+                  testtesttesttesttesttesttesttesttesttesttesttest
+                  testtesttesttesttesttesttesttesttesttesttesttest
+                  testtesttesttesttesttesttesttesttesttesttesttest
+                  testtesttesttesttesttesttesttesttesttesttesttest
+                  testtesttesttesttesttesttesttesttesttesttesttest
+                  testtesttesttesttesttesttesttesttesttesttesttest
+                  testtesttesttesttesttesttesttesttesttesttesttest
+                  testtesttesttesttesttesttesttesttesttesttesttest
+                  testtesttesttesttesttesttesttesttesttesttesttest
+                  testtesttesttesttesttesttesttesttesttesttesttest
+                  testtesttesttesttesttesttesttesttesttesttesttest
+                  testtesttesttesttesttesttesttesttesttesttesttest
+                  submitted by: {f.username}
+                </p>
             </p>
         )
     })
