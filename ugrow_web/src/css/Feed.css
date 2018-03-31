@@ -17,6 +17,7 @@
 .feedBounds {
     position: absolute;
     top: 22%;
+    overflow: hidden;
 }
 
 #feedB {
@@ -46,4 +47,5 @@ p {
     font-weight: 400;
     color: #2b522b;
     width: 100%;
+    float: left;
 }
