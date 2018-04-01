@@ -1,0 +1,65 @@
+.profModal{
+    float: left;
+    margin-left: 6%;
+  }
+  
+  .Modal {
+      background-image: url("User_Tree_Page/tabs/tabs/Leaves.tab.png"), url("User_Tree_Page/tabs/Pop-up_window.png");
+      background-size: 92%, 95%;
+      background-repeat: no-repeat, no-repeat;
+      position: absolute;
+      top: 50%,0%;
+      left: 50%,7%;
+      right: 50%,3%;
+      bottom: 50%,2%;
+    }
+  
+    .Overlay {
+      position: fixed;
+      top: 7%;
+      left: 0;
+      right: 0;
+      bottom: 0;
+    }
+  
+  #editButton {
+    position: absolute;
+    right: 25%;
+    bottom: 30%;
+    background-color: transparent;
+    cursor:pointer;
+    border: none;
+    outline: none;
+  }
+  
+  #modalText {
+    margin-top: 10%;
+  }
+  
+  #topBranch {
+    position: absolute;
+    size: 40%;
+    top: 8%;
+  }
+  
+  #sideBranch {
+    float: left;
+  }
+  
+  #postText {
+    margin-left: 12%;
+  }
+  
+  #singleQA {
+    overflow: hidden;
+  }
+  
+  #profTitle {
+    margin-top: 1%;
+    text-align: center;
+  }
+  
+  #profInfo {
+    margin-top: 7%;
+  }
+  
