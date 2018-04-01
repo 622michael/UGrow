@@ -1,7 +1,7 @@
 import React, { Component } from "react"
 import '../css/Feed.css'
 import API from '../API'
-import ProfileModal from './profileTree'
+import FeedModal from './feedTree'
 
 //png files
 import feedB from '../css/Feed_Page/Title_Feed_Back.png'
@@ -20,7 +20,7 @@ export default class Feed extends Component {
     let feedPosts = feed.map((f) => {
         return (
             <p key={f.id} id ="singlePost">
-                <ProfileModal user={f.username}/>
+                <FeedModal user={f.username}/>
                 <p id="feedText">
                 <br/>
                   Q:{f.question}

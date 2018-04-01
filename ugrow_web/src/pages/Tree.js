@@ -1,7 +1,7 @@
 import React, { Component } from "react"
 import { NavLink } from 'reactstrap'
 import ReactModal from 'react-modal'
-import TreeModal from '../components/userInput'
+import ProfModal from '../components/personalProf'
 import SwitchButton from 'react-switch-button'
 import '../css/Tree.css'
 
@@ -14,7 +14,7 @@ export default class Tree extends Component {
   render() {
     return (
       <div className="tree">
-        <TreeModal />
+        <ProfModal />
           <div class="onoffswitch">
             <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch"/>
             <label class="onoffswitch-label" for="myonoffswitch">
