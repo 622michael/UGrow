@@ -1,13 +1,13 @@
 import React, { Component } from "react"
 import ReactModal from 'react-modal'
-import '../css/profileTree.css'
+import '../css/feedTree.css'
 import API from '../API'
 
 import feedLeaf from '../css/Feed_Page/Feed_Leaf_2.png'
 import topBranch from '../css/User_Tree_Page/tabs/root.graphic_2.png'
 import sideBranch from '../css/User_Tree_Page/tabs/small.root.graphic.png'
 
-export default class profileTree extends Component {
+export default class feedTree extends Component {
   constructor(props) {
     super(props)
     this.state = { 
@@ -49,7 +49,7 @@ export default class profileTree extends Component {
   
   render() {
     return (
-        <div className="profileModal">
+        <div className="feedModal">
           <button id ="leafButton" onClick={() => this.handleOpenMod(this.props.user)}><img src={feedLeaf} alt=""/></button>
           <ReactModal
             isOpen={this.state.showMod}
