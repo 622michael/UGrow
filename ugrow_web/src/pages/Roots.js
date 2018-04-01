@@ -8,7 +8,6 @@ export default class Roots extends Component {
         super(props);
         this.state = {
             value: '',
-            rootQs: [],
         };
 
         this.handleChange = this.handleChange.bind(this);
@@ -26,22 +25,6 @@ export default class Roots extends Component {
         alert('An answer was submitted: ' + this.state.value);
     }
 
-    setQuestions = (questions) => {
-        let qDropdowns = questions.map((q) => {
-            return (
-                <form key={q.id} onSubmit={this.handleSubmit}>
-                    {q.qText}
-                    <input type="text" onChange={this.handleChange} />
-                </form>
-            )
-        })
-        this.setState({ rootQs: qDropdowns });
-    }
-
-    componentWillMount() {
-        API.questionData.then(questions => this.setQuestions(questions));
-    }
-
     render() {
         return (
             <div id="roots">
@@ -52,7 +35,6 @@ export default class Roots extends Component {
                 <Header />
                 This is the roots page.
                 <InputModal/>
-                {this.state.rootQs}
                 <Footer />
                 <button onClick={this.handleSubmit}>
                     Testing

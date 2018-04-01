@@ -1,7 +1,7 @@
 import React from 'react';
 
 // Get
-export const ROOTS_QUESTION_TEST_URL = 'https://api.myjson.com/bins/125zn5'
+export const ROOTS_QUESTION_TEST_URL = 'https://api.myjson.com/bins/wvxlj'
 export const RESOURCES_TEST_URL = 'https://api.myjson.com/bins/1cn7w1'
 export const RESOURCES_ROUTE = 'https://20a0ca07.ngrok.io/resources'
 export const FEED_TEST_ROUTE = 'https://api.myjson.com/bins/u2jwn'
