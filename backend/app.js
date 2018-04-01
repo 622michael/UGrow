@@ -31,7 +31,8 @@ app.use('/', routes)
 // app.use('/answer', answerRoute)
 
 app.use('/', function(req, res) {
-  res.sendFile(path.resolve(__dirname + "/../build/index.html"))
+  // console.log("HELLO")
+  res.sendFile(path.resolve(__dirname + "/../public/index.html"))
 })
 
 module.exports = app

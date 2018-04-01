@@ -9,7 +9,7 @@ import feedLeaf from './css/Feed_Page/Feed_Leaf.png'
 
 export default class Feed extends Component {
 
-  doSomething = () => {
+  doSomething() {
     alert("you clicked the leaf!")
   }
 

@@ -26,7 +26,7 @@ export default class TopNav extends React.Component {
     };
   }
 
-  toggleNavbar = () => {
+  toggleNavbar() {
     this.setState({
       collapsed: !this.state.collapsed
     });

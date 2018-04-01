@@ -25,26 +25,26 @@ export default class Resources extends React.Component {
     }
   }
 
-  toLu = () => {
+  toLu() {
     this.setState({
       currentTab: tabStates.lehighU,
     })
     alert(this.state.currentTab)
   }
-  toLv = () => {
+  toLv() {
     this.setState({
       currentTab: tabStates.lehighV,
     })
     alert(this.state.currentTab)
   }
-  toUs = () => {
+  toUs() {
     this.setState({
       currentTab: tabStates.usa,
     })
     alert(this.state.currentTab)
   }
 
-  setResources = (resources) => {
+  setResources(resources) {
     console.log("resources:", resources);
     let rLinks = resources.map((rl) => {
         return (

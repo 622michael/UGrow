@@ -14,18 +14,18 @@ export default class Roots extends Component {
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
-    handleChange = (event) => {
+    handleChange(event) {
         this.setState({ value: event.target.value });
         console.log(this.state);
     }
 
-    handleSubmit = (event) => {
+    handleSubmit(event) {
         API.postAnswer(1,69,this.state.value);
         console.log("Submitted");
         alert('An answer was submitted: ' + this.state.value);
     }
 
-    setQuestions = (questions) => {
+    setQuestions(questions) {
         let qDropdowns = questions.map((q) => {
             return (
                 <form key={q.id} onSubmit={this.handleSubmit}>

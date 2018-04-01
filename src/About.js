@@ -14,7 +14,7 @@ export default class About extends React.Component {
     }
   }
 
-  toggle = () => {
+  toggle() {
     this.setState({
         leftSideClicked: !this.state.leftSideClicked,
     })

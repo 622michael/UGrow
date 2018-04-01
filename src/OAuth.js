@@ -16,7 +16,7 @@ export default class GoogleAuth extends React.Component {
         }
     }
 
-    toggle = () => {
+    toggle() {
         this.setState({
             isLoggedIn: !this.state.isLoggedIn,
         })
@@ -24,7 +24,7 @@ export default class GoogleAuth extends React.Component {
 
     /* Collects the response */
 
-    handleLoginSuccess = (response) => {
+    handleLoginSuccess(response) {
         // Grabs the token portion we want:
         let userToken = response.tokenObj;
         console.log(userToken);
@@ -37,7 +37,7 @@ export default class GoogleAuth extends React.Component {
         this.toggle();
     }
 
-    handleLogoutSuccess = () => this.toggle()
+    handleLogoutSuccess() {this.toggle()}
         
 
     render() {
