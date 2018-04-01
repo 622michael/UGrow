@@ -16,7 +16,8 @@
 
 .feedBounds {
     position: absolute;
-    top: 22%;
+    top: 24%;
+    width: 80vw;
     overflow: hidden;
 }
 
@@ -32,20 +33,21 @@
     left: 35.2%;
 }
 
-#feedLeaf {
-    background-color: transparent;
-    cursor:pointer;
-    border: none;
-    outline: none;
-    size: 50%;
-}
 
-p {
+p {              
+    text-indent: 0%;
     font-size: 12pt;
     font-family: mr-eaves-modern, sans-serif;
     font-style: italic;
     font-weight: 400;
     color: #2b522b;
     width: 100%;
-    float: left;
+}
+
+#singlePost {
+    margin-bottom: 3%; 
+}
+
+#feedText {
+    margin-left: 15%;
 }
