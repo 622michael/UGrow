@@ -28,7 +28,7 @@
 #ddMenu {
     position: absolute;
     right: 5%;
-    top: 1.5%;
+    top: 2%;
 }
 
 #adminLink {
@@ -42,6 +42,6 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    top: 8%;
-    right: 6%;
+    top: 10%;
+    right: 4%;
 }

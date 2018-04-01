@@ -3,7 +3,9 @@ import ReactModal from 'react-modal'
 import '../css/profileTree.css'
 import API from '../API'
 
-import feedLeaf from '../css/Feed_Page/Feed_Leaf3.png'
+import feedLeaf from '../css/Feed_Page/Feed_Leaf_2.png'
+import topBranch from '../css/User_Tree_Page/tabs/root.graphic_2.png'
+import sideBranch from '../css/User_Tree_Page/tabs/small.root.graphic.png'
 
 export default class profileTree extends Component {
   constructor(props) {
@@ -27,11 +29,14 @@ export default class profileTree extends Component {
   loadUserFeed = (feed) => {
     let userFeedPosts = feed.map((f) => {
         return (
-            <p key={f.id} >
-                Q:{f.question}
-                <br/> 
-                A:{f.answer}
-                submitted by: {f.username}
+            <p key={f.id} id ="singleQA">
+                <img src={sideBranch} alt="" id="sideBranch"/>
+                <p id="postText">  
+                  Q:{f.question}
+                  <br/> 
+                  A:{f.answer}
+                  submitted by:{f.username}
+                </p>
             </p>
         )
     })
@@ -53,11 +58,12 @@ export default class profileTree extends Component {
             className="Modal"
             overlayClassName="Overlay"
           >
-            <p>Question history for:</p>
-            <br/>
-            <p>{this.state.userMod}</p>
-            <br/>
-            {this.state.userFeed}
+          
+          <img src={topBranch} alt="" id="topBranch"/>
+            <h5 id="profTitle">Question history for: {this.state.userMod}</h5>
+            <div id="profInfo">
+              {this.state.userFeed}
+            </div>
             <button onClick={this.handleCloseMod}>Close Modal</button>
           </ReactModal>
         </div>

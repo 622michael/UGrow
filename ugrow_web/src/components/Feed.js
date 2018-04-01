@@ -19,24 +19,31 @@ export default class Feed extends Component {
   loadFeed = (feed) => {
     let feedPosts = feed.map((f) => {
         return (
-            <p key={f.id} >
+            <p key={f.id} id ="singlePost">
                 <ProfileModal user={f.username}/>
-                &nbsp;
-                &nbsp;
-                &nbsp;
-                &nbsp;
-                &nbsp;
-                &nbsp;
-                Q:{f.question}
-                <br/> 
-                &nbsp;
-                &nbsp;
-                &nbsp;
-                &nbsp;
-                &nbsp;
-                &nbsp; 
-                A:{f.answer}
-                submitted by: {f.username}
+                <p id="feedText">
+                <br/>
+                  Q:{f.question}
+                  <br/> 
+                  A:{f.answer}
+                  testtesttesttesttesttesttesttesttest
+                  testtesttesttesttesttesttesttesttest
+                  testtesttesttesttesttesttesttesttest
+                  testtesttesttesttesttesttesttesttest
+                  testtesttesttesttesttesttesttesttest
+                  testtesttesttesttesttesttesttesttest
+                  testtesttesttesttesttesttesttesttest
+                  testtesttesttesttesttesttesttesttest
+                  testtesttesttesttesttesttesttesttest
+                  testtesttesttesttesttesttesttesttest
+                  testtesttesttesttesttesttesttesttest
+                  testtesttesttesttesttesttesttesttest
+                  testtesttesttesttesttesttesttesttest
+                  testtesttesttesttesttesttesttesttest
+                  testtesttesttesttesttesttesttesttest
+                  testtesttesttesttesttesttesttesttest
+                  submitted by: {f.username}
+                </p>
             </p>
         )
     })
