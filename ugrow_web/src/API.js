@@ -17,6 +17,7 @@ export const NGROK_BASE = 'https://77b3e41d.ngrok.io/'
 
 // Get
 export const ROOTS_QUESTIONS_NGROK = NGROK_BASE + 'questions/root'
+export const FEED_NGROK = NGROK_BASE + 'feed'
 
 // Post
 export const ANSWER_POST_NGROK = NGROK_BASE + 'answer'
@@ -83,35 +84,22 @@ export default class API extends React.Component {
     ///////////////////////////////////
 
     static get feedData() {
-        return fetch(FEED_TEST_ROUTE)
+        return fetch(FEED_NGROK)
         .then(response => response.json()) 
         .then(json => {
-            let feedData = json.feed;
+            let feedData = json.answers;
             console.log(feedData);
             return feedData;
         }) 
         .catch(caught => console.log("Caught error loading feed: " + caught))
     }
 
-    static userFeed(user) {
-        var userFeedURL = '';
-
-        // Fake logic to choose
-        if (user === '420blazeit') {
-            userFeedURL = USER_FEED_420blazeit;
-        }
-        if (user === 'veryhighIQindividual') {
-            userFeedURL = USER_FEED_veryhighIQindividual;
-        }
+    static userFeed(userId) {
+        var userFeedURL = FEED_NGROK + '/' + userId;
 
         // Actual route
         return fetch(userFeedURL)
-        .then(response => response.json()) 
-        .then(json => {
-            let feedData = json.feed;
-            console.log(feedData);
-            return feedData;
-        }) 
+        .then(response => {return response.json()}) 
         .catch(caught => console.log("Caught error loading feed: " + caught))
     }
 
