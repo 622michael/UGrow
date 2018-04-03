@@ -18,6 +18,7 @@ export default class userInput extends Component {
       branchesIndex: 0,
       personalIndex: 0,
       tabIndex: 0,
+      value: ''
     }
 
     this.handleOpenModal = this.handleOpenModal.bind(this)
@@ -31,6 +32,8 @@ export default class userInput extends Component {
     this.goRoots = this.goRoots.bind(this)
     this.goBranches = this.goBranches.bind(this)
     this.goPersonal = this.goPersonal.bind(this)
+    this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleChange = this.handleChange.bind(this);
   }
 
   /**
@@ -52,16 +55,26 @@ export default class userInput extends Component {
   setQuestions = (questions) => {
     let qDropdowns = questions.map((q) => {
         return (
-            <form key={q.id} onSubmit={this.handleSubmit}>
+          <div>
+            <form key={q.id}>
                 {q.qText}
                 <input type="text" onChange={this.handleChange} />
                 <br/>
                 Consider: {q.consider}
+                <br/>
+                <br/>
             </form>
+            <button onClick={(qID, val) => this.handleSubmit(q.id, this.state.value)}>Submit</button>
+          </div>
         )
     })
     this.setState({ questions: qDropdowns });
   }
+
+  handleChange = (event) => {
+    this.setState({ value: event.target.value });
+}
+ 
   handleCloseModal(){
     this.setState({showModal: false})
     var currIndex = 0
@@ -107,6 +120,11 @@ export default class userInput extends Component {
   handlePersonalNext(){
     var currIndex = this.state.personalIndex + 1
     this.setState({personalIndex: currIndex})
+  }
+
+  handleSubmit = (qID, val) => {
+    API.postAnswer(qID, val);
+    alert('The answer "' + val + '" was submitted for question: ' + qID)
   }
   
   render() {

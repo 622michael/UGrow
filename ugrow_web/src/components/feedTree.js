@@ -20,22 +20,20 @@ export default class feedTree extends Component {
     this.handleCloseMod = this.handleCloseMod.bind(this)
   }
 
-  handleOpenMod(username){
-    API.userFeed(username).then(questions => this.loadUserFeed(questions)) 
-    this.setState({showMod: true,
-                   userMod: username})
+  handleOpenMod(userId){
+    API.userFeed(userId).then(questions => this.loadUserFeed(questions)) 
+    this.setState({showMod: true })
   }
  
   loadUserFeed = (feed) => {
-    let userFeedPosts = feed.map((f) => {
+    let userFeedPosts = feed.answers.map((f) => {
         return (
             <p key={f.id} id ="singleQA">
                 <img src={sideBranch} alt="" id="sideBranch"/>
                 <p id="postText">  
-                  Q:{f.question}
+                  Q:{f.question.qText}
                   <br/> 
-                  A:{f.answer}
-                  submitted by:{f.username}
+                  A:{f.aText}
                 </p>
             </p>
         )
@@ -50,7 +48,7 @@ export default class feedTree extends Component {
   render() {
     return (
         <div className="feedModal">
-          <button id ="leafButton" onClick={() => this.handleOpenMod(this.props.user)}><img src={feedLeaf} alt=""/></button>
+          <button id ="leafButton" onClick={() => this.handleOpenMod(this.props.userId)}><img src={feedLeaf} alt=""/></button>
           <ReactModal
             isOpen={this.state.showMod}
             contentLabel="onRequestClose Example"
