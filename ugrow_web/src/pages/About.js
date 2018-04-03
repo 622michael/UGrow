@@ -1,16 +1,18 @@
 import React from "react";
 import '../css/About.css'
 
-//png files
+//image files
 import aboutIcon from '../css/About_Page/ABOUT.png'
 import projectIcon from '../css/About_Page/THE_PROJECT.png'
 import teamIcon from '../css/About_Page/THE_TEAM.png'
+import lexi from '../css/About_Page/headshotLexi_2.jpg'
+import Katie from '../css/About_Page/headshotLexi_2.jpg'
 
 export default class About extends React.Component {
   constructor(props){
     super(props);
     this.state = {
-      leftSide: false,
+      leftSide: true,
     }
   }
 
@@ -37,7 +39,9 @@ export default class About extends React.Component {
           <button id="teamIcon" onClick={this.switchRight}>
             <img src={teamIcon} alt=""/>
           </button>
-          <div id="aboutTeam">
+          <img src={lexi} alt="" id="lexi"/>
+          <img src={lexi} alt="" id="katie"/>
+          <div id="aboutLexi">
             <p>
               Graduating in May 2018, Lexi Haggert is a senior at Lehigh University majoring in Accounting 
               with minors in Global Studies and Anthropology. Throughout her time at Lehigh, she has been 
@@ -48,6 +52,8 @@ export default class About extends React.Component {
               working for a Big Four firm. She hopes to use her interdisciplinary background to create a more diverse, open, 
               and inclusive business environment within her firm and the larger business community. 
             </p>
+          </div>
+          <div id="aboutKatie">
             <p>
               Katie Barr is also a senior at Lehigh University, double majoring in Global Studies and German 
               with a minor in Anthropology.  Katie works at Lehigh’s Center for Community Engagement, which seeks to 

@@ -18,8 +18,6 @@ import Hiw from './pages/Hiw'
 import Privacy from './pages/Privacy'
 import Resources from './pages/Resources'
 import Roots from './pages/Roots'
-import Branches from './pages/Branches'
-import Extras from './pages/Extras'
 import Tree from './pages/Tree'
 import Feed from './components/Feed'
 import admin from './admin'
@@ -43,8 +41,6 @@ class App extends Component {
             <Route path='/privacy' component={Privacy}/>
             <Route path='/resources' component={Resources}/>
             <Route path='/roots' component={Roots}/>
-            <Route path='/branches' component={Branches}/>
-            <Route path='/extras' component={Extras}/>
             <Route path='/tree' component={Tree}/>
             <Route path='/feed' component={Feed}/>
             <Route path='/admin' component={admin}/>

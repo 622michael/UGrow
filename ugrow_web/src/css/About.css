@@ -35,16 +35,37 @@ p {
     color: #a0a0a0;
 }
 
-#aboutTeam {
+#aboutLexi {
     position: absolute;
     top: 33%;
-    left: 20%;
+    left: 30%;
     right: 20%;
+}
+
+#aboutKatie {
+    position: absolute;
+    text-align: justify;
+    top: 61%;
+    left: 18%;
+    right: 30%;
 }
 
 #aboutProject {
     position: absolute;
-    top: 33%;
-    left: 20%;
-    right: 20%;
+    text-align: justify;
+    top: 35%;
+    left: 18%;
+    right: 18%;
+}
+
+#lexi {
+    position: absolute;
+    top: 33.5%;
+    left: 18%;
+}
+
+#katie {
+    position: absolute;
+    top: 61%;
+    right: 18%;
 }

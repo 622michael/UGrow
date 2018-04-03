@@ -64,7 +64,7 @@ export default class feedTree extends Component {
             <div id="profInfo">
               {this.state.userFeed}
             </div>
-            <button onClick={this.handleCloseMod}>Close Modal</button>
+            <button id="closeButton" onClick={this.handleCloseMod}>Close Modal</button>
           </ReactModal>
         </div>
     );

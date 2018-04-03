@@ -32,28 +32,8 @@ export default class Roots extends Component {
                 <br/>
                 <br/>
                 <br/>
-                <Header />
-                This is the roots page.
                 <InputModal/>
-                <Footer />
-                <button onClick={this.handleSubmit}>
-                    Testing
-                </button>
             </div>
         );
     }
 }
-
-const Header = () => (
-    <header>
-        ROOTS -----> Branches -----> Extras
-    </header>
-)
-
-const Footer = () => (
-    <footer>
-        <button>
-            <NavLink href="/branches">Continue</NavLink>
-        </button>
-    </footer>
-)

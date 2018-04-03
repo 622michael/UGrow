@@ -26,3 +26,74 @@
     border: none;
     outline: none;
   }
+
+  #userInputContents {
+    position: absolute;
+    left: 7%;
+    top: 25%;
+  }
+
+  #xButton {
+    position: absolute;
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+    right: 5%;
+    top: 3%
+  }
+
+  .rootsButton {
+    position: absolute;
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+    font-family: futura-pt, sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12pt;
+    color: #0b7a7a;
+    border-radius: 8px;
+    bottom: 3%;
+    left: 19%;
+  }
+
+  .rootsButton:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+  }
+
+  .branchesButton {
+    position: absolute;
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+    font-family: futura-pt, sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12pt;
+    color: #0b7a7a;
+    border-radius: 8px;
+    bottom: 3%;
+    left: 45.5%;
+  }
+
+  .branchesButton:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+  }
+
+  .personalButton {
+    position: absolute;
+    background-color: transparent;
+    cursor: pointer;
+    font-family: futura-pt, sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12pt;
+    color: #0b7a7a;
+    border-radius: 8px;
+    bottom: 3%;
+    right: 20%;
+  }
+
+  .personalButton:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+  }

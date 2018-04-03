@@ -4,14 +4,14 @@
 }
 
 .Modal {
-    background-image: url("User_Tree_Page/tabs/tabs/Leaves.tab.png"), url("User_Tree_Page/tabs/Pop-up_window.png");
-    background-size: 92%, 95%;
+    background-image: url("User_Tree_Page/tabs/tabs/personal.tab.png"), url("User_Tree_Page/tabs/Pop-up_window.png");
+    background-size: 88%, 95%;
     background-repeat: no-repeat, no-repeat;
-    position: absolute;
-    top: 50%,0%;
+    background-position: center, center;
+    /* top: 50%,0%;
     left: 50%,7%;
     right: 50%,3%;
-    bottom: 50%,2%;
+    bottom: 50%,2%; */
   }
 
   .Overlay {
@@ -37,7 +37,8 @@
 #topBranch {
   position: absolute;
   size: 40%;
-  top: 8%;
+  top: 8.6%;
+  left: 6.1%;
 }
 
 #sideBranch {
@@ -50,6 +51,8 @@
 
 #singleQA {
   overflow: hidden;
+  position: relative;
+  left: 6%;
 }
 
 #profTitle {
@@ -59,4 +62,9 @@
 
 #profInfo {
   margin-top: 7%;
+}
+
+#closeButton {
+  position: relative;
+  left: 6%;
 }
