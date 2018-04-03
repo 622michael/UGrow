@@ -12,7 +12,10 @@ router.use(function timeLog(req, res, next){
 })
 
 router.get('/feed', function(req, res) {
-	answer.findAll({ limit: 20 }).then(answers => res.json(answers))
+	answer.findAll({
+		limit: 20,
+		include: question
+	}).then(answers => res.json({answers}))
 })
 
 router.get('/resources', function(req, res) {
@@ -32,22 +35,23 @@ router.get('/answers/:branch_or_root', function(req, res) {
 	answer.findAll({
 		include: question,
 		where: {
-			branch_or_root: req.params.branch_or_root
+			qType: req.params.branch_or_root
 		}
-	}).then( answers => res.json(answers) )
+	}).then( answers => res.json({answers}) )
 })
 
-router.get('/questions/:branch_or_route', function(req, res) {
+router.get('/questions/:branch_or_root', function(req, res) {
 	question.findAll({
 		where: {
-			branch_or_root: req.params.branch_or_root
+			qType: req.params.branch_or_root
 		}
-	})
+	}).then(questions => res.json({questions}))
 })
 
 router.post('/answer', function(req, res) {
-	console.log(req.body);
-	answer.create(req.body).then(result => res.json({ success: true} ))
+	answer.create(Object.assign(req.body, {
+		UserId: null
+	})).then(result => res.json({ success: true} ))
 })
 
 router.post('/question', function(req, res) {
