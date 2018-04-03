@@ -23,9 +23,9 @@ export default class Feed extends Component {
                 <FeedModal user={f.username}/>
                 <p id="feedText">
                 <br/>
-                  Q:{f.question}
+                  Q:{f.qText}
                   <br/> 
-                  A:{f.answer}
+                  A:{f.aText}
                   testtesttesttesttesttesttesttesttest
                   testtesttesttesttesttesttesttesttest
                   testtesttesttesttesttesttesttesttest
