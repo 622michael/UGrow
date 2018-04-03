@@ -84,6 +84,7 @@
     position: absolute;
     background-color: transparent;
     cursor: pointer;
+    border: none;
     font-family: futura-pt, sans-serif;
     font-style: normal;
     font-weight: 700;
@@ -96,4 +97,31 @@
 
   .personalButton:hover {
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+  }
+
+  #save {
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    position: absolute;
+    left: 42%;
+    top: 62%;
+  }
+
+  #prefName {
+    position: absolute;
+    left: 12%;
+    top: 12%;
+  }
+
+  #note {
+    position: absolute;
+    left: 10%;
+    top: 80%;
+  }
+
+  #nameForm {
+    position: absolute;
+    left: 43.5%;
+    top: 50%;
   }

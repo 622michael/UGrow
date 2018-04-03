@@ -17,8 +17,16 @@
 
 .onoffswitch {
   position: absolute; width: 70px;
-  right: 7%; bottom: 10%;
   -webkit-user-select:none; -moz-user-select:none; -ms-user-select: none;
+}
+
+#actualswitch {
+  right: 7%; bottom: 7%;
+}
+
+#testswitch {
+  right: 50%;
+  bottom: 7%;
 }
 .onoffswitch-checkbox {
   display: none;
@@ -60,4 +68,16 @@
 }
 .onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {
   right: 0px; 
+}
+
+#profileName {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 30pt;
+  color: #8d9b9b;
+  position: absolute;
+  right: 13%;
+  bottom: 5%;
+  width: 85%;
+  text-align: right;
 }

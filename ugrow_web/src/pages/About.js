@@ -6,7 +6,7 @@ import aboutIcon from '../css/About_Page/ABOUT.png'
 import projectIcon from '../css/About_Page/THE_PROJECT.png'
 import teamIcon from '../css/About_Page/THE_TEAM.png'
 import lexi from '../css/About_Page/headshotLexi_2.jpg'
-import Katie from '../css/About_Page/headshotLexi_2.jpg'
+import katie from '../css/About_Page/headshotKatie_3.jpg'
 
 export default class About extends React.Component {
   constructor(props){
@@ -40,7 +40,7 @@ export default class About extends React.Component {
             <img src={teamIcon} alt=""/>
           </button>
           <img src={lexi} alt="" id="lexi"/>
-          <img src={lexi} alt="" id="katie"/>
+          <img src={katie} alt="" id="katie"/>
           <div id="aboutLexi">
             <p>
               Graduating in May 2018, Lexi Haggert is a senior at Lehigh University majoring in Accounting 

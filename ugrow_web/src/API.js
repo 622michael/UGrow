@@ -13,7 +13,7 @@ export const USER_FEED_veryhighIQindividual = 'https://api.myjson.com/bins/wgabr
 
 /* ngrok mock routes */
 
-export const NGROK_BASE = 'https://77b3e41d.ngrok.io/'
+export const NGROK_BASE = 'https://6f8a3b04.ngrok.io/'
 
 // Get
 export const ROOTS_QUESTIONS_NGROK = NGROK_BASE + 'questions/root'

@@ -6,7 +6,15 @@ import API from '../API'
 import myTreeButton from '../css/User_Tree_Page/Edit_my_tree_button.png'
 import topBranch from '../css/User_Tree_Page/tabs/root.graphic_2.png'
 import sideBranch from '../css/User_Tree_Page/tabs/small.root.graphic.png'
+import topLeaf from '../css/User_Tree_Page/tabs/Leaf.graphic_2.png'
+import sideLeaf from '../css/User_Tree_Page/tabs/small.leaf.graphic.png'
 import xButton from '../css/x_button.png'
+import consider from '../css/User_Tree_Page/tabs/CONSIDER(green).png'
+import upload from '../css/User_Tree_Page/tabs/import.png'
+import saveButton from '../css/User_Tree_Page/tabs/personal/SAVE.button.png'
+import myPrefName from '../css/User_Tree_Page/tabs/personal/My_preferred_name_is.png'
+import note from '../css/User_Tree_Page/tabs/personal/Note_3.png'
+import inputBackground from '../css/User_Tree_Page/tabs/personal/input.background.png'
 
 export default class userInput extends Component {
   constructor(props) {
@@ -32,21 +40,26 @@ export default class userInput extends Component {
     this.goRoots = this.goRoots.bind(this)
     this.goBranches = this.goBranches.bind(this)
     this.goPersonal = this.goPersonal.bind(this)
-    this.handleSubmit = this.handleSubmit.bind(this);
-    this.handleChange = this.handleChange.bind(this);
+    this.saveName = this.saveName.bind(this)
+    this.handleSubmit = this.handleSubmit.bind(this)
+    this.handleChange = this.handleChange.bind(this)
   }
 
   /**
    * Universal functions
    */
   goRoots(){
-    this.setState({tabIndex:0})
-  }
-  goBranches(){
     this.setState({tabIndex:1})
   }
-  goPersonal(){
+  goBranches(){
     this.setState({tabIndex:2})
+  }
+  goPersonal(){
+    this.setState({tabIndex:3})
+  }
+  saveName(){
+    this.setState({tabIndex:1})
+    /* save the name here MOose! */
   }
   handleOpenModal(){
     API.questionData.then(questions => this.setQuestions(questions));
@@ -56,11 +69,17 @@ export default class userInput extends Component {
     let qDropdowns = questions.map((q) => {
         return (
           <div>
+            
             <form key={q.id}>
                 {q.qText}
+                <br/>
+                <br/>
+                <br/>
+                <img src={sideBranch} alt="" id="sideBranch"/>
                 <input type="text" onChange={this.handleChange} />
                 <br/>
-                Consider: {q.consider}
+                <br/>
+                <img src={consider} alt="" id="consider"/> {q.consider}
                 <br/>
                 <br/>
             </form>
@@ -139,6 +158,29 @@ export default class userInput extends Component {
               className="Modal"
               overlayClassName="Overlay"
             >
+              <button id="xButton" onClick={this.handleCloseModal}>close<img src={xButton} alt=""/></button>
+              <img src={myPrefName} alt="" id="prefName"/>
+              <form id="nameForm">
+                {/* <img src={inputBackground} alt="" id="inputBackground"/> */}
+                <input type="text" onChange={this.handleChange}/>                
+              </form>
+              <button id="save" onClick={this.saveName}><img src={saveButton} alt=""/></button>
+              <img src={note} alt="" id="note"/>
+            </ReactModal>
+          </div>
+      );
+    }
+    else if(this.state.tabIndex == 1){
+      return (
+          <div>
+            <button id ="editButton" onClick={this.handleOpenModal}><img src={myTreeButton} alt=""/></button>
+            <ReactModal
+              isOpen={this.state.showModal}
+              contentLabel="onRequestClose Example"
+              onRequestClose={this.handleCloseModal}
+              className="Modal"
+              overlayClassName="Overlay"
+            >
 
               <img src={topBranch} alt="" id="topBranch"/>
               <button id="xButton" onClick={this.handleCloseModal}>close<img src={xButton} alt=""/></button>
@@ -156,7 +198,7 @@ export default class userInput extends Component {
           </div>
       );
     }
-    else if(this.state.tabIndex == 1){
+    else if(this.state.tabIndex == 2){
       return (
         <div>
           <button id ="editButton" onClick={this.handleOpenModal}><img src={myTreeButton} alt=""/></button>
@@ -168,10 +210,11 @@ export default class userInput extends Component {
             overlayClassName="Overlay"
           >
 
-            <img src={topBranch} alt="" id="topBranch"/>
+            <img src={topLeaf} alt="" id="topBranch"/>
             <button id="xButton" onClick={this.handleCloseModal}>close<img src={xButton} alt=""/></button>
             <div id="userInputContents">
               <p>Branches</p>
+              <input type="file"/>
               <br/>
               <br/>
               <button onClick={this.handleBranchesPrevious}>Previous</button>
@@ -196,10 +239,11 @@ export default class userInput extends Component {
             overlayClassName="Overlay"
           >
 
-            <img src={topBranch} alt="" id="topBranch"/>
+            <img src={topLeaf} alt="" id="topBranch"/>
             <button id="xButton" onClick={this.handleCloseModal}>close<img src={xButton} alt=""/></button>
             <div id="userInputContents">
               <p>Personal</p>
+              <input type="file"/>
               <br/>
               <br/>
               <button onClick={this.handlePersonalPrevious}>Previous</button>
