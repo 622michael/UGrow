@@ -1,6 +1,6 @@
 var express = require('express')
 var router = express.Router()
-var { sequelize, answer, question } = require('../db/models')
+var { sequelize, answer, question, user } = require('../db/models')
 // var test = require('../db/models')
 // console.log(test)
 
@@ -16,6 +16,22 @@ router.get('/feed', function(req, res) {
 		limit: 20,
 		include: question
 	}).then(answers => res.json({answers}))
+})
+
+router.get('/feed/:id', function(req, res) {
+	let result = {};
+	answer.findAll({
+		include: question,
+		where: {
+			userId: req.params.id
+		}
+	}).then(answers => {
+		result.answers = answers;
+		return user.findById(req.params.id)
+	}).then(user => {
+		result.user = user;
+		res.json(result)
+	})
 })
 
 router.get('/resources', function(req, res) {
@@ -50,7 +66,7 @@ router.get('/questions/:branch_or_root', function(req, res) {
 
 router.post('/answer', function(req, res) {
 	answer.create(Object.assign(req.body, {
-		UserId: null
+		userId: 2
 	})).then(result => res.json({ success: true} ))
 })
 

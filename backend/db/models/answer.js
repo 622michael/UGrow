@@ -13,7 +13,7 @@ module.exports = (sequelize, DataTypes) => {
     //   }
     // })
     // Answer.belongsTo(models.User)
-    Answer.belongsTo(models.User)
+    Answer.belongsTo(models.user)
     Answer.belongsTo(models.question)
   }
 

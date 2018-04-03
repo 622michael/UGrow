@@ -4,7 +4,7 @@ create table answers (
     "createdAt" TIMESTAMP,
     "updatedAt" TIMESTAMP,
     "questionId" integer references questions(id),
-    "UserId" integer references users(id),
+    "userId" integer references users(id),
     "aText" text,
     private boolean,
     picture boolean
