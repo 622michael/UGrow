@@ -49,10 +49,12 @@ router.get('/resources', function(req, res) {
 
 router.get('/answers/:branch_or_root', function(req, res) {
 	answer.findAll({
-		include: question,
-		where: {
-			qType: req.params.branch_or_root
-		}
+		include: [{
+			model: question,
+			where: {
+				qType: req.params.branch_or_root
+			}
+		}]
 	}).then( answers => res.json({answers}) )
 })
 
